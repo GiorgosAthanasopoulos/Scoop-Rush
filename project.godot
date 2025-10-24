@@ -14,6 +14,12 @@ config/name="The Fast and the Fractured"
 config/features=PackedStringArray("4.6")
 config/icon="res://assets/icons/launcher/icon.svg"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="The Fast and the Fractured"
@@ -22,3 +28,4 @@ project/assembly_name="The Fast and the Fractured"
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.5137255, 0.83137256, 0.92941177, 1)
