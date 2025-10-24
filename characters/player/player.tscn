@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://fcyjhs1b2xoo"]
+[gd_scene load_steps=5 format=3 uid="uid://fcyjhs1b2xoo"]
 
+[ext_resource type="Script" uid="uid://bnvhyixu6ga44" path="res://characters/player/scripts/player.gd" id="1_5dc8e"]
 [ext_resource type="PackedScene" uid="uid://bl80yilenf6hw" path="res://characters/player/wheel.tscn" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://8ibi4v6y2t04" path="res://assets/images/car/Car without hook.png" id="1_t61fv"]
 [ext_resource type="PackedScene" uid="uid://dmux5cauc83dn" path="res://characters/player/hook.tscn" id="3_686vu"]
 
-[node name="player" type="RigidBody2D" unique_id=76268478]
+[node name="player" type="RigidBody2D" unique_id=76268478 node_paths=PackedStringArray("wheels")]
+script = ExtResource("1_5dc8e")
+wheels = [NodePath("left_wheel_pin_joint/wheel"), NodePath("right_wheel_pin_joint/wheel")]
 
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="." unique_id=468195840]
 polygon = PackedVector2Array(-219, -47, -220, 72, -195, 98, 195, 97, 214, 82, 213, -8, 11, -59)
@@ -19,7 +22,7 @@ region_filter_clip_enabled = true
 position = Vector2(-296, 249)
 node_a = NodePath("..")
 node_b = NodePath("wheel")
-softness = 16.0
+softness = 6.0
 
 [node name="wheel" parent="left_wheel_pin_joint" unique_id=556693885 instance=ExtResource("1_ft8w5")]
 
@@ -27,7 +30,7 @@ softness = 16.0
 position = Vector2(315, 238)
 node_a = NodePath("..")
 node_b = NodePath("wheel")
-softness = 16.0
+softness = 6.0
 
 [node name="wheel" parent="right_wheel_pin_joint" unique_id=1464670969 instance=ExtResource("1_ft8w5")]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dkkfq2k3276ns"]
 
-[ext_resource type="PackedScene" uid="uid://fcyjhs1b2xoo" path="res://characters/player/player.tscn" id="1_f14l5"]
+[ext_resource type="PackedScene" uid="uid://fcyjhs1b2xoo" path="res://characters/player/player.tscn" id="1_eq150"]
 
 [node name="level_1" type="Node2D" unique_id=634582132]
 
@@ -9,7 +9,7 @@
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="static_body_2d" unique_id=762618636]
 polygon = PackedVector2Array(-1, 8, 1160, 94, 1925, 660, 3203, 661, 4437, -529, 5949, -540, 5982, 1422, -1002, 1406, -1035, -19)
 
-[node name="player" parent="." unique_id=76268478 instance=ExtResource("1_f14l5")]
+[node name="player" parent="." unique_id=76268478 instance=ExtResource("1_eq150")]
 position = Vector2(0, -600)
 
 [node name="camera_2d" type="Camera2D" parent="player" unique_id=547115392]
@@ -18,3 +18,7 @@ process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_horizontal_offset = 0.71
+drag_left_margin = 0.8
+editor_draw_drag_margin = true
