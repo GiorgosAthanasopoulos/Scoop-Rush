@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://fcyjhs1b2xoo"]
+
+[ext_resource type="PackedScene" uid="uid://bl80yilenf6hw" path="res://scenes/characters/player/wheel.tscn" id="1_ft8w5"]
+[ext_resource type="Texture2D" uid="uid://8ibi4v6y2t04" path="res://assets/Images/Car/Car without hook.png" id="1_t61fv"]
+[ext_resource type="PackedScene" uid="uid://dmux5cauc83dn" path="res://scenes/characters/player/hook.tscn" id="3_686vu"]
+
+[node name="player" type="RigidBody2D" unique_id=76268478]
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="." unique_id=468195840]
+polygon = PackedVector2Array(-219, -47, -220, 72, -195, 98, 195, 97, 214, 82, 213, -8, 11, -59)
+
+[node name="sprite_2d" type="Sprite2D" parent="." unique_id=1253684601]
+texture = ExtResource("1_t61fv")
+region_enabled = true
+region_rect = Rect2(514, 724, 1077, 534)
+region_filter_clip_enabled = true
+
+[node name="left_wheel_pin_joint" type="PinJoint2D" parent="." unique_id=147562643]
+position = Vector2(-296, 249)
+node_a = NodePath("..")
+node_b = NodePath("wheel")
+softness = 16.0
+
+[node name="wheel" parent="left_wheel_pin_joint" unique_id=556693885 instance=ExtResource("1_ft8w5")]
+
+[node name="right_wheel_pin_joint" type="PinJoint2D" parent="." unique_id=1977231549]
+position = Vector2(315, 238)
+node_a = NodePath("..")
+node_b = NodePath("wheel")
+softness = 16.0
+
+[node name="wheel" parent="right_wheel_pin_joint" unique_id=1464670969 instance=ExtResource("1_ft8w5")]
+
+[node name="hook_pin_joint" type="PinJoint2D" parent="." unique_id=1331350533]
+position = Vector2(-503, 55)
+node_a = NodePath("..")
+node_b = NodePath("hook")
+
+[node name="hook" parent="hook_pin_joint" unique_id=280866802 instance=ExtResource("3_686vu")]
+position = Vector2(-123, -129)
