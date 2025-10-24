@@ -1,13 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=20 format=3 uid="uid://dkkfq2k3276ns"]
 
 [ext_resource type="PackedScene" uid="uid://fcyjhs1b2xoo" path="res://characters/player/player.tscn" id="1_eq150"]
+[ext_resource type="Script" uid="uid://c6kxvfqr4ewu1" path="res://addons/rmsmartshape/shapes/shape_closed.gd" id="2_tysf0"]
+[ext_resource type="Script" uid="uid://bwcf4pjgprn0k" path="res://addons/rmsmartshape/shapes/point.gd" id="3_3jy00"]
+[ext_resource type="Script" uid="uid://bo5f7qe27jfje" path="res://addons/rmsmartshape/shapes/point_array.gd" id="4_8yb7b"]
+[ext_resource type="Script" uid="uid://0lhxan4cqrc1" path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" id="5_gw1fo"]
+[ext_resource type="Script" uid="uid://nc5bfedvnpgm" path="res://addons/rmsmartshape/materials/shape_material.gd" id="6_jhqhn"]
+
+[sub_resource type="Resource" id="Resource_tysf0"]
+script = ExtResource("3_3jy00")
+position = Vector2(-8939.335, -13.933594)
+
+[sub_resource type="Resource" id="Resource_3jy00"]
+script = ExtResource("3_3jy00")
+position = Vector2(8299.281, -94.11328)
+
+[sub_resource type="Resource" id="Resource_8yb7b"]
+script = ExtResource("3_3jy00")
+position = Vector2(23854.127, -2659.8613)
+
+[sub_resource type="Resource" id="Resource_gw1fo"]
+script = ExtResource("3_3jy00")
+position = Vector2(33555.86, -2900.3984)
+
+[sub_resource type="Resource" id="Resource_jhqhn"]
+script = ExtResource("3_3jy00")
+position = Vector2(46544.96, -6508.4824)
+
+[sub_resource type="Resource" id="Resource_ddtso"]
+script = ExtResource("3_3jy00")
+position = Vector2(56727.766, -6829.201)
+
+[sub_resource type="Resource" id="Resource_f7y8c"]
+script = ExtResource("3_3jy00")
+position = Vector2(72603.336, -13.933594)
+
+[sub_resource type="Resource" id="Resource_xc23s"]
+script = ExtResource("3_3jy00")
+position = Vector2(88158.19, -13.933594)
+
+[sub_resource type="Resource" id="Resource_n5g8f"]
+script = ExtResource("3_3jy00")
+position = Vector2(88639.266, 14979.654)
+
+[sub_resource type="Resource" id="Resource_qugyr"]
+script = ExtResource("3_3jy00")
+position = Vector2(-9340.232, 14097.68)
+
+[sub_resource type="Resource" id="Resource_bntk2"]
+script = ExtResource("3_3jy00")
+position = Vector2(-8939.335, -13.933594)
+
+[sub_resource type="Resource" id="Resource_v1ci3"]
+script = ExtResource("4_8yb7b")
+_points = {
+0: SubResource("Resource_bntk2"),
+2: SubResource("Resource_tysf0"),
+3: SubResource("Resource_3jy00"),
+4: SubResource("Resource_8yb7b"),
+5: SubResource("Resource_gw1fo"),
+6: SubResource("Resource_jhqhn"),
+7: SubResource("Resource_ddtso"),
+8: SubResource("Resource_f7y8c"),
+9: SubResource("Resource_xc23s"),
+10: SubResource("Resource_n5g8f"),
+11: SubResource("Resource_qugyr")
+}
+_point_order = PackedInt32Array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0)
+_constraints = {
+Vector2i(2, 0): 15
+}
+_next_key = 12
+
+[sub_resource type="Resource" id="Resource_ghnt0"]
+script = ExtResource("6_jhqhn")
 
 [node name="level_1" type="Node2D" unique_id=634582132]
-
-[node name="static_body_2d" type="StaticBody2D" parent="." unique_id=1569247948]
-
-[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="static_body_2d" unique_id=762618636]
-polygon = PackedVector2Array(-1, 8, 1160, 94, 1925, 660, 3203, 661, 4437, -529, 5949, -540, 5982, 1422, -1002, 1406, -1035, -19)
 
 [node name="player" parent="." unique_id=76268478 instance=ExtResource("1_eq150")]
 position = Vector2(0, -600)
@@ -18,7 +86,16 @@ process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_horizontal_offset = 0.71
-drag_left_margin = 0.8
 editor_draw_drag_margin = true
+
+[node name="ss_2d_shape_closed" type="Node2D" parent="." unique_id=359810094]
+script = ExtResource("2_tysf0")
+_points = SubResource("Resource_v1ci3")
+shape_material = SubResource("Resource_ghnt0")
+collision_polygon_node_path = NodePath("../static_body_2d/CollisionPolygon2D")
+metadata/_custom_type_script = "uid://c6kxvfqr4ewu1"
+
+[node name="static_body_2d" type="StaticBody2D" parent="." unique_id=1774360254]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="static_body_2d" unique_id=984650386]
+polygon = PackedVector2Array(-8939.335, -13.933594, 8299.281, -94.11328, 18000, -3677, 33555.86, -2900.3984, 43328, -8148, 56727.766, -6829.201, 72603.336, -13.933594, 88158.19, -13.933594, 88639.266, 14979.654, -9340.232, 14097.68)
