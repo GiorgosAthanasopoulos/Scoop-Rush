@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg34qd2hsv5k7"
-path="res://.godot/imported/Wheels.png-b8e2a65d7b619b612b1836faf26037e7.ctex"
+uid="uid://bu2e6ycdfcvg1"
+path="res://.godot/imported/Hook.png-6ccc5ed4bc4a12e063a644430243c8d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/Car/Wheels.png"
-dest_files=["res://.godot/imported/Wheels.png-b8e2a65d7b619b612b1836faf26037e7.ctex"]
+source_file="res://assets/images/car/Hook.png"
+dest_files=["res://.godot/imported/Hook.png-6ccc5ed4bc4a12e063a644430243c8d5.ctex"]
 
 [params]
 

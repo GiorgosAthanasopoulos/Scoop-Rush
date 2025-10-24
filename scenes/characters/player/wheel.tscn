@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bl80yilenf6hw"]
 
-[ext_resource type="Texture2D" uid="uid://ptum15vu4vmn" path="res://assets/Images/Car/Wheel with texture.png" id="1_pp2hp"]
+[ext_resource type="Texture2D" uid="uid://ptum15vu4vmn" path="res://assets/images/car/Wheel with texture.png" id="1_pp2hp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_877mm"]
 radius = 113.0

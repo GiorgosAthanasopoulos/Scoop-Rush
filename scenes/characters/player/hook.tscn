@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dmux5cauc83dn"]
 
-[ext_resource type="Texture2D" uid="uid://bu2e6ycdfcvg1" path="res://assets/Images/Car/Hook.png" id="1_2cjnn"]
+[ext_resource type="Texture2D" uid="uid://bu2e6ycdfcvg1" path="res://assets/images/car/Hook.png" id="1_2cjnn"]
 
 [node name="hook" type="RigidBody2D" unique_id=280866802]
 collision_layer = 2
