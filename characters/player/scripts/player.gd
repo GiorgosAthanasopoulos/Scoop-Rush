@@ -1,30 +1,36 @@
 extends RigidBody2D
 
 @export var wheels: Array[Wheel] = []
+
 @export var torque: float = 200_000
 @export var air_torque: float = 1_000_000
-@export var max_speed: float = 9000
+@export var max_torque: float = 30
+@export var air_torque_left_wheel_divider: float = 2
+
 @export var flip_reset_timer: float = 3
 @export var flip_limits_deg: Vector2i = Vector2i(100, 260)
 
 var _flipped_timer: float = 0
 
 func _accelerate(_torque: float, _air_torque: float, delta: float) -> void:
-	var has_air_torque: bool = _air_torque != 0
-	if has_air_torque:
-		apply_torque_impulse(_air_torque * delta)
-
 	var no_torque: bool = _torque == 0
 	if no_torque:
 		return
 
 	for wheel: Wheel in wheels:
-		print(wheel.angular_velocity)
-		var has_hit_max_speed: bool = abs(wheel.angular_velocity) >= abs(max_speed)
+		var has_hit_max_speed: bool = abs(wheel.angular_velocity) >= abs(max_torque)
 		if has_hit_max_speed:
 			continue
 
 		wheel.apply_torque_impulse(_torque * delta)
+
+func _turn(_torque: float, delta: float) -> void:
+	var has_air_torque: bool = _torque != 0
+	if not has_air_torque:
+		return
+
+	var moving_right: bool = Input.is_action_pressed(&'move_right')
+	apply_torque_impulse(_torque * delta if moving_right else _torque / air_torque_left_wheel_divider * delta)
 
 func _handle_flipping(delta: float) -> void:
 	var abs_rotation_deg: float = abs(rad_to_deg(rotation))
@@ -47,5 +53,11 @@ func _process(delta: float) -> void:
 
 	if Input.is_action_pressed(&'move_right'):
 		_accelerate(torque, air_torque, delta)
+
+	if Input.is_action_pressed(&'turn_left'):
+		_turn(-air_torque, delta)
+
+	if Input.is_action_pressed(&'turn_right'):
+		_turn(air_torque, delta)
 
 	_handle_flipping(delta)
