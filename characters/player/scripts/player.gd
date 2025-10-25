@@ -22,7 +22,7 @@ func _accelerate(_torque: float, delta: float) -> void:
 
 func _handle_flipping(delta: float) -> void:
 	var abs_rotation_deg: float = abs(rad_to_deg(rotation))
-	var has_flipped: bool = abs_rotation_deg > flip_limits_deg.x or abs_rotation_deg < flip_limits_deg.y
+	var has_flipped: bool = abs_rotation_deg > flip_limits_deg.x and abs_rotation_deg < flip_limits_deg.y
 
 	if not has_flipped:
 		_flipped_timer = 0
