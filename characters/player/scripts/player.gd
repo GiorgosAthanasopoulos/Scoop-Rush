@@ -1,19 +1,25 @@
 extends RigidBody2D
 
 @export var wheels: Array[Wheel] = []
-@export var torque: float = 300_000
-@export var max_speed: float = 50
+@export var torque: float = 200_000
+@export var air_torque: float = 1_000_000
+@export var max_speed: float = 9000
 @export var flip_reset_timer: float = 3
 @export var flip_limits_deg: Vector2i = Vector2i(100, 260)
 
 var _flipped_timer: float = 0
 
-func _accelerate(_torque: float, delta: float) -> void:
+func _accelerate(_torque: float, _air_torque: float, delta: float) -> void:
+	var has_air_torque: bool = _air_torque != 0
+	if has_air_torque:
+		apply_torque_impulse(_air_torque * delta)
+
 	var no_torque: bool = _torque == 0
 	if no_torque:
 		return
 
 	for wheel: Wheel in wheels:
+		print(wheel.angular_velocity)
 		var has_hit_max_speed: bool = abs(wheel.angular_velocity) >= abs(max_speed)
 		if has_hit_max_speed:
 			continue
@@ -37,9 +43,9 @@ func _handle_flipping(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed(&'move_left'):
-		_accelerate(-torque, delta)
+		_accelerate(-torque, -air_torque, delta)
 
 	if Input.is_action_pressed(&'move_right'):
-		_accelerate(torque, delta)
+		_accelerate(torque, air_torque, delta)
 
 	_handle_flipping(delta)
