@@ -12,9 +12,6 @@ physics_material_override = SubResource("PhysicsMaterial_5dc8e")
 script = ExtResource("1_5dc8e")
 wheels = [NodePath("left_wheel_pin_joint/wheel"), NodePath("right_wheel_pin_joint/wheel")]
 
-[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="." unique_id=468195840]
-polygon = PackedVector2Array(-219, -47, -220, 72, -195, 98, 195, 97, 214, 82, 213, -8, 11, -59)
-
 [node name="sprite_2d" type="Sprite2D" parent="." unique_id=1253684601]
 texture = ExtResource("1_t61fv")
 region_enabled = true
@@ -44,3 +41,6 @@ node_b = NodePath("hook")
 
 [node name="hook" parent="hook_pin_joint" unique_id=280866802 instance=ExtResource("3_686vu")]
 position = Vector2(-123, -129)
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="." unique_id=468195840]
+polygon = PackedVector2Array(-501, 51, -487, 240, -468, 262, -412, 260, -394, 162, -292, 124, -195, 178, -179, 249, 197, 241, 209, 171, 297, 111, 401, 151, 431, 227, 528, 227, 530, -44, 417, -75, 355, -259, 23, -240, 14, 23)
