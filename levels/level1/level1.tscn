@@ -147,17 +147,6 @@ fill_textures = Array[Texture2D]([ExtResource("6_gw1fo")])
 
 [node name="level_1" type="Node2D" unique_id=634582132]
 
-[node name="player" parent="." unique_id=76268478 instance=ExtResource("1_eq150")]
-position = Vector2(-77, -1545)
-
-[node name="camera_2d" type="Camera2D" parent="player" unique_id=547115392]
-zoom = Vector2(0.4, 0.4)
-process_callback = 0
-limit_smoothed = true
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
-editor_draw_drag_margin = true
-
 [node name="static_body_2d" type="StaticBody2D" parent="." unique_id=995063561]
 
 [node name="ss_2d_shape" type="Node2D" parent="static_body_2d" unique_id=1282509970]
@@ -170,3 +159,14 @@ metadata/_custom_type_script = "uid://dhdc4b8yddyej"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="static_body_2d" unique_id=306602134]
 polygon = PackedVector2Array(-14165.353, -4438.427, -4265.5713, -1792.9365, 2991.046, -223.1323, 5703.255, 116.89256, 6643.7363, 112.35547, 7236.051, -32.67383, 15503.823, -3844.9688, 15963.53, -4003.772, 16550.898, -4096.605, 18037.184, -4122.434, 25516.604, -3490.6282, 27055.58, -3529.6309, 27677.201, -3631.0264, 28176.426, -3799.709, 36234.01, -9148.942, 37849.1, -9973.557, 39714.527, -10587.558, 43765.17, -11243.035, 47523.53, -11234.014, 49023.6, -11017.389, 49631.695, -10862.535, 50127.195, -10679.127, 50577.47, -10384.4375, 51056.945, -9912.745, 52092.004, -8547.775, 54385.945, -4897.4697, 56824.79, -1479.0092, 57435.555, -865.7916, 58040.984, -403.84564, 58638.19, -120.52746, 59224.313, -43.19336, 87220.72, -10046.832, 83419.86, 3311.0488, -5433.7324, 3967.0654)
+
+[node name="player" parent="." unique_id=76268478 instance=ExtResource("1_eq150")]
+position = Vector2(-77, -1545)
+
+[node name="camera_2d" type="Camera2D" parent="player" unique_id=547115392]
+zoom = Vector2(0.4, 0.4)
+process_callback = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+editor_draw_drag_margin = true
