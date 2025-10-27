@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cxa0t1yohjcop"]
 
-[ext_resource type="Script" uid="uid://chhcb1ei1n642" path="res://ui/game/hud/scripts/cargo_counter.gd" id="1_rnu65"]
+[ext_resource type="Script" uid="uid://chhcb1ei1n642" path="res://ui/hud/scripts/cargo_counter.gd" id="1_rnu65"]
 
 [node name="hud" type="Control" unique_id=1399470084]
 layout_mode = 3

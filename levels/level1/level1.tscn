@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://d218yx0d1ilsn" path="res://addons/rmsmartshape/normal_range.gd" id="9_ddtso"]
 [ext_resource type="PackedScene" uid="uid://cj7fpj1ukt7wq" path="res://interactables/finish/finish.tscn" id="10_ddtso"]
 [ext_resource type="PackedScene" uid="uid://brli5xhtjs6j" path="res://interactables/brickle/brickle.tscn" id="11_qugyr"]
-[ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://ui/game/hud/hud.tscn" id="12_f7y8c"]
+[ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://ui/hud/hud.tscn" id="12_f7y8c"]
 [ext_resource type="PackedScene" uid="uid://d4fmleankm8df" path="res://interactables/cargo/cargo.tscn" id="13_xc23s"]
 [ext_resource type="PackedScene" uid="uid://b3vj3jmn5omwm" path="res://interactables/killzone/killzone.tscn" id="14_n5g8f"]
 
