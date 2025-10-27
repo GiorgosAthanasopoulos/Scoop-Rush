@@ -23,7 +23,7 @@ config/icon="res://assets/icons/launcher/icon.svg"
 
 [autoload]
 
-Signals="*res://scripts/signals.gd"
+Signals="*res://global_scripts/signals.gd"
 
 [debug]
 
