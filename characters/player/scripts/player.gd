@@ -7,7 +7,7 @@ extends RigidBody2D
 @export var max_torque: float = 30
 @export var air_torque_left_wheel_divider: float = 2
 
-@export var flip_reset_timer: float = 3
+@export var flip_reset_time: float = 3
 @export var flip_limits_deg: Vector2i = Vector2i(100, 260)
 
 var _flipped_timer: float = 0
@@ -37,15 +37,15 @@ func _handle_flipping(delta: float) -> void:
 	var has_flipped: bool = abs_rotation_deg > flip_limits_deg.x and abs_rotation_deg < flip_limits_deg.y
 
 	if not has_flipped:
-		_flipped_timer = 0
+		_flipped_timer = 0 # reset flipped timer
 		return
 
 	_flipped_timer += delta
-	var needs_to_restart: bool = _flipped_timer > flip_reset_timer
+	var needs_to_restart: bool = _flipped_timer > flip_reset_time
 	if needs_to_restart:
 		var error: Error = get_tree().reload_current_scene()
 		if error != OK:
-			print(error)
+			print(error_string(error))
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed(&'move_left'):
