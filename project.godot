@@ -19,7 +19,7 @@ config/description="MashUp Game Jam '25 Entry."
 config/version="0.0.1"
 run/main_scene="uid://dkkfq2k3276ns"
 config/features=PackedStringArray("4.6")
-config/icon="res://assets/icons/launcher/icon.svg"
+config/icon="res://icons/launcher/icon.svg"
 
 [autoload]
 

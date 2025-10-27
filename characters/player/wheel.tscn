@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bl80yilenf6hw"]
 
 [ext_resource type="Script" uid="uid://coy0gqnreh0rj" path="res://characters/player/scripts/wheel.gd" id="1_6vija"]
-[ext_resource type="Texture2D" uid="uid://ptum15vu4vmn" path="res://assets/images/car/Wheel with texture.png" id="1_pp2hp"]
+[ext_resource type="Texture2D" uid="uid://ptum15vu4vmn" path="res://characters/player/art/wheels (old)/Wheel with texture.png" id="1_pp2hp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6vija"]
 friction = 2.0

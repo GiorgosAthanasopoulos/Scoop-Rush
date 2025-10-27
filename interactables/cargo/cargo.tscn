@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d4fmleankm8df"]
 
 [ext_resource type="Script" uid="uid://cq1lakqlx2ffs" path="res://interactables/cargo/scripts/cargo.gd" id="1_7b51v"]
-[ext_resource type="Texture2D" uid="uid://cjgv4tukd8bpj" path="res://assets/images/car/Cargo.png" id="2_43wmy"]
+[ext_resource type="Texture2D" uid="uid://cjgv4tukd8bpj" path="res://interactables/cargo/art/Cargo.png" id="2_43wmy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whk3t"]
 size = Vector2(421, 376)

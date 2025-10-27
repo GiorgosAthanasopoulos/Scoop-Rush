@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bo5f7qe27jfje" path="res://addons/rmsmartshape/shapes/point_array.gd" id="4_8yb7b"]
 [ext_resource type="Script" uid="uid://llobjh5hvry" path="res://addons/rmsmartshape/shapes/mesh.gd" id="5_8yb7b"]
 [ext_resource type="Script" uid="uid://0lhxan4cqrc1" path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" id="5_gw1fo"]
-[ext_resource type="Texture2D" uid="uid://chqjm3psexe7r" path="res://assets/icons/launcher/icon.svg" id="6_gw1fo"]
+[ext_resource type="Texture2D" uid="uid://chqjm3psexe7r" path="res://icons/launcher/icon.svg" id="6_gw1fo"]
 [ext_resource type="Script" uid="uid://nc5bfedvnpgm" path="res://addons/rmsmartshape/materials/shape_material.gd" id="6_jhqhn"]
 [ext_resource type="Script" uid="uid://d0xjijisx1woh" path="res://addons/rmsmartshape/materials/edge_material.gd" id="8_jhqhn"]
 [ext_resource type="Script" uid="uid://d218yx0d1ilsn" path="res://addons/rmsmartshape/normal_range.gd" id="9_ddtso"]

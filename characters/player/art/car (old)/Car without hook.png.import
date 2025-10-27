@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjgv4tukd8bpj"
-path="res://.godot/imported/Cargo.png-22cb71087dcce5699914b824d2bedfe3.ctex"
+uid="uid://8ibi4v6y2t04"
+path="res://.godot/imported/Car without hook.png-da435fccba169165398a55e1e2163f32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/car/Cargo.png"
-dest_files=["res://.godot/imported/Cargo.png-22cb71087dcce5699914b824d2bedfe3.ctex"]
+source_file="res://characters/player/art/car (old)/Car without hook.png"
+dest_files=["res://.godot/imported/Car without hook.png-da435fccba169165398a55e1e2163f32.ctex"]
 
 [params]
 

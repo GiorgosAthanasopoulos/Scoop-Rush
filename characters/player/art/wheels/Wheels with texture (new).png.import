@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chqjm3psexe7r"
-path="res://.godot/imported/icon.svg-4279321ec072f8b67d1f6f56087b589e.ctex"
+uid="uid://bmv3qus4s6smq"
+path="res://.godot/imported/Wheels with texture (new).png-2503b28faa9fbce8e4fd1cfa4a24310d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/launcher/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-4279321ec072f8b67d1f6f56087b589e.ctex"]
+source_file="res://characters/player/art/wheels/Wheels with texture (new).png"
+dest_files=["res://.godot/imported/Wheels with texture (new).png-2503b28faa9fbce8e4fd1cfa4a24310d.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

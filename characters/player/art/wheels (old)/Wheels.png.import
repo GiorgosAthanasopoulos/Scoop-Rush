@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8ibi4v6y2t04"
-path="res://.godot/imported/Car without hook.png-bd965f070aaa299fb7a41589108c985b.ctex"
+uid="uid://bg34qd2hsv5k7"
+path="res://.godot/imported/Wheels.png-f4e59f76c5f2a5eef033aee37eff33e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/car/Car without hook.png"
-dest_files=["res://.godot/imported/Car without hook.png-bd965f070aaa299fb7a41589108c985b.ctex"]
+source_file="res://characters/player/art/wheels (old)/Wheels.png"
+dest_files=["res://.godot/imported/Wheels.png-f4e59f76c5f2a5eef033aee37eff33e7.ctex"]
 
 [params]
 
