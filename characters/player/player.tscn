@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://fcyjhs1b2xoo"]
+[gd_scene load_steps=6 format=3 uid="uid://fcyjhs1b2xoo"]
 
 [ext_resource type="Script" uid="uid://bnvhyixu6ga44" path="res://characters/player/scripts/player.gd" id="1_5dc8e"]
 [ext_resource type="PackedScene" uid="uid://bl80yilenf6hw" path="res://characters/player/wheel.tscn" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://8ibi4v6y2t04" path="res://assets/images/car/Car without hook.png" id="1_t61fv"]
-[ext_resource type="PackedScene" uid="uid://dmux5cauc83dn" path="res://characters/player/hook.tscn" id="3_686vu"]
 [ext_resource type="Script" uid="uid://syvbalmbfi6a" path="res://characters/player/scripts/turn.gd" id="5_ixbpm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5dc8e"]
@@ -33,14 +32,6 @@ node_b = NodePath("wheel")
 softness = 6.0
 
 [node name="wheel" parent="right_wheel_pin_joint" unique_id=1464670969 instance=ExtResource("1_ft8w5")]
-
-[node name="hook_pin_joint" type="PinJoint2D" parent="." unique_id=1331350533]
-position = Vector2(-503, 55)
-node_a = NodePath("..")
-node_b = NodePath("hook")
-
-[node name="hook" parent="hook_pin_joint" unique_id=280866802 instance=ExtResource("3_686vu")]
-position = Vector2(-123, -129)
 
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="." unique_id=468195840]
 polygon = PackedVector2Array(-501, 51, -487, 240, -468, 262, -412, 260, -394, 162, -292, 124, -195, 178, -179, 249, 197, 241, 209, 171, 297, 111, 401, 151, 431, 227, 528, 227, 530, -44, 417, -75, 355, -259, 23, -240, 14, 23)
