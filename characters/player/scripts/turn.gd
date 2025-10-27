@@ -14,7 +14,7 @@ func _turn(_torque: float, delta: float) -> void:
 	if not has_air_torque:
 		return
 
-	var moving_right: bool = Input.is_action_pressed(&'turn_right')
+	var moving_right: bool = Input.is_action_pressed(&'move_right')
 	_player.apply_torque_impulse(_torque * delta if moving_right else _torque / air_torque_left_wheel_divider * delta)
 
 func _handle_flipping(delta: float) -> void:

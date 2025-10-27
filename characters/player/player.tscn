@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://fcyjhs1b2xoo"]
+[gd_scene load_steps=5 format=3 uid="uid://fcyjhs1b2xoo"]
 
-[ext_resource type="Script" uid="uid://bnvhyixu6ga44" path="res://characters/player/scripts/player.gd" id="1_5dc8e"]
 [ext_resource type="PackedScene" uid="uid://bl80yilenf6hw" path="res://characters/player/wheel.tscn" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://8ibi4v6y2t04" path="res://assets/images/car/Car without hook.png" id="1_t61fv"]
 [ext_resource type="Script" uid="uid://syvbalmbfi6a" path="res://characters/player/scripts/turn.gd" id="5_ixbpm"]
@@ -9,7 +8,6 @@
 
 [node name="player" type="RigidBody2D" unique_id=76268478 groups=["player"]]
 physics_material_override = SubResource("PhysicsMaterial_5dc8e")
-script = ExtResource("1_5dc8e")
 
 [node name="sprite_2d" type="Sprite2D" parent="." unique_id=1253684601]
 texture = ExtResource("1_t61fv")
