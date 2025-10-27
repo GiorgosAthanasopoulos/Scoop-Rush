@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://da81ukjqkjqi1"]
+
+[ext_resource type="Texture2D" uid="uid://crie4w27j1377" path="res://characters/player/art/hook/Hook (new).png" id="1_pjvs1"]
+
+[node name="hook" type="Node2D" unique_id=1162284347]
+
+[node name="sprite_2d" type="Sprite2D" parent="." unique_id=387461682]
+texture = ExtResource("1_pjvs1")
+region_enabled = true
+region_rect = Rect2(323, 281, 127, 168)
