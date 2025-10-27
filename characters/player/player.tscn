@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://fcyjhs1b2xoo"]
 
 [ext_resource type="PackedScene" uid="uid://bl80yilenf6hw" path="res://characters/player/wheel.tscn" id="1_ft8w5"]
-[ext_resource type="Texture2D" uid="uid://8ibi4v6y2t04" path="res://characters/player/art/car (old)/Car without hook.png" id="1_t61fv"]
+[ext_resource type="Texture2D" uid="uid://ccalx84h4enuv" path="res://characters/player/art/car/Car (new).png" id="2_5dc8e"]
 [ext_resource type="Script" uid="uid://cx8dfuhrbkpcx" path="res://characters/player/scripts/grapple_line.gd" id="4_5dc8e"]
 [ext_resource type="Script" uid="uid://syvbalmbfi6a" path="res://characters/player/scripts/turn.gd" id="5_ixbpm"]
 
@@ -11,14 +11,8 @@
 physics_material_override = SubResource("PhysicsMaterial_5dc8e")
 script = ExtResource("5_ixbpm")
 
-[node name="sprite_2d" type="Sprite2D" parent="." unique_id=1253684601]
-texture = ExtResource("1_t61fv")
-region_enabled = true
-region_rect = Rect2(514, 724, 1077, 534)
-region_filter_clip_enabled = true
-
 [node name="left_wheel_pin_joint" type="PinJoint2D" parent="." unique_id=147562643]
-position = Vector2(-296, 249)
+position = Vector2(-206, 160)
 node_a = NodePath("..")
 node_b = NodePath("wheel")
 softness = 6.0
@@ -26,15 +20,21 @@ softness = 6.0
 [node name="wheel" parent="left_wheel_pin_joint" unique_id=556693885 instance=ExtResource("1_ft8w5")]
 
 [node name="right_wheel_pin_joint" type="PinJoint2D" parent="." unique_id=1977231549]
-position = Vector2(315, 238)
+position = Vector2(212, 155)
 node_a = NodePath("..")
 node_b = NodePath("wheel")
 softness = 6.0
 
 [node name="wheel" parent="right_wheel_pin_joint" unique_id=1464670969 instance=ExtResource("1_ft8w5")]
 
+[node name="sprite_2d" type="Sprite2D" parent="." unique_id=1253684601]
+texture = ExtResource("2_5dc8e")
+region_enabled = true
+region_rect = Rect2(235, 399, 800, 369)
+region_filter_clip_enabled = true
+
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="." unique_id=468195840]
-polygon = PackedVector2Array(-501, 51, -487, 240, -468, 262, -412, 260, -394, 162, -292, 124, -195, 178, -179, 249, 197, 241, 209, 171, 297, 111, 401, 151, 431, 227, 528, 227, 530, -44, 417, -75, 355, -259, 23, -240, 14, 23)
+polygon = PackedVector2Array(-330, -179, -371, 132, -406, 131, -400, 171, -367, 166, -367, 184, -287, 179, -281, 148, -139, 140, -115, 179, 130, 179, 167, 131, 285, 131, 327, 169, 391, 180, 396, -27, 254, -85, 207, -183)
 
 [node name="grapple_line" type="Line2D" parent="." unique_id=810325032]
 default_color = Color(0, 0, 0, 1)

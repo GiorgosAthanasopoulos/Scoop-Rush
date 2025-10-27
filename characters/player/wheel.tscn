@@ -1,23 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://bl80yilenf6hw"]
 
 [ext_resource type="Script" uid="uid://coy0gqnreh0rj" path="res://characters/player/scripts/wheel.gd" id="1_6vija"]
-[ext_resource type="Texture2D" uid="uid://ptum15vu4vmn" path="res://characters/player/art/wheels (old)/Wheel with texture.png" id="1_pp2hp"]
+[ext_resource type="Texture2D" uid="uid://bmv3qus4s6smq" path="res://characters/player/art/wheels/Wheels with texture (new).png" id="2_6vija"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6vija"]
 friction = 2.0
 bounce = 0.2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_877mm"]
-radius = 113.0
+radius = 70.0
 
 [node name="wheel" type="RigidBody2D" unique_id=556693885]
 physics_material_override = SubResource("PhysicsMaterial_6vija")
 script = ExtResource("1_6vija")
 
 [node name="sprite_2d" type="Sprite2D" parent="." unique_id=1162613967]
-texture = ExtResource("1_pp2hp")
+texture = ExtResource("2_6vija")
 region_enabled = true
-region_rect = Rect2(647, 1151, 225, 223)
+region_rect = Rect2(43, 692, 139, 139)
 region_filter_clip_enabled = true
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=549189021]
