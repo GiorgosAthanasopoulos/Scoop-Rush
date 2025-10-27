@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://brli5xhtjs6j"]
+[gd_scene load_steps=3 format=3 uid="uid://brli5xhtjs6j"]
 
-[ext_resource type="Script" uid="uid://dcl145hrs3fp" path="res://interactables/brickle/scripts/brickle.gd" id="1_4blyq"]
 [ext_resource type="Texture2D" uid="uid://chqjm3psexe7r" path="res://assets/icons/launcher/icon.svg" id="1_hs4iq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4blyq"]
@@ -8,7 +7,6 @@ size = Vector2(128, 128)
 
 [node name="brickle" type="Area2D" unique_id=174221569 groups=["brickle"]]
 scale = Vector2(5, 5)
-script = ExtResource("1_4blyq")
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=1928381513]
 shape = SubResource("RectangleShape2D_4blyq")
