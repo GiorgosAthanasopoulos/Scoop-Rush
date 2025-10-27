@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=45 format=4 uid="uid://dkkfq2k3276ns"]
 
 [ext_resource type="PackedScene" uid="uid://fcyjhs1b2xoo" path="res://characters/player/player.tscn" id="1_eq150"]
 [ext_resource type="Script" uid="uid://dhdc4b8yddyej" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_tysf0"]
@@ -11,8 +11,10 @@
 [ext_resource type="Script" uid="uid://d0xjijisx1woh" path="res://addons/rmsmartshape/materials/edge_material.gd" id="8_jhqhn"]
 [ext_resource type="Script" uid="uid://d218yx0d1ilsn" path="res://addons/rmsmartshape/normal_range.gd" id="9_ddtso"]
 [ext_resource type="PackedScene" uid="uid://cj7fpj1ukt7wq" path="res://interactables/finish/finish.tscn" id="10_ddtso"]
+[ext_resource type="PackedScene" uid="uid://brli5xhtjs6j" path="res://interactables/brickle/brickle.tscn" id="11_qugyr"]
 [ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://ui/game/hud/hud.tscn" id="12_f7y8c"]
 [ext_resource type="PackedScene" uid="uid://d4fmleankm8df" path="res://interactables/cargo/cargo.tscn" id="13_xc23s"]
+[ext_resource type="PackedScene" uid="uid://b3vj3jmn5omwm" path="res://interactables/killzone/killzone.tscn" id="14_n5g8f"]
 
 [sub_resource type="Resource" id="Resource_bntk2"]
 script = ExtResource("3_3jy00")
@@ -168,6 +170,44 @@ script = ExtResource("6_jhqhn")
 _edge_meta_materials = Array[ExtResource("5_gw1fo")]([SubResource("Resource_hnqb5")])
 fill_textures = Array[Texture2D]([ExtResource("6_gw1fo")])
 
+[sub_resource type="Resource" id="Resource_ffx24"]
+script = ExtResource("3_3jy00")
+position = Vector2(57778.12, 1343.4648)
+
+[sub_resource type="Resource" id="Resource_sukyl"]
+script = ExtResource("3_3jy00")
+position = Vector2(69789.76, 1366.6895)
+
+[sub_resource type="Resource" id="Resource_op4u2"]
+script = ExtResource("3_3jy00")
+position = Vector2(69720.08, 19.629883)
+
+[sub_resource type="Resource" id="Resource_s8udm"]
+script = ExtResource("3_3jy00")
+position = Vector2(57759.117, 42.85547)
+
+[sub_resource type="Resource" id="Resource_nx25r"]
+script = ExtResource("3_3jy00")
+position = Vector2(57778.12, 1343.4648)
+
+[sub_resource type="Resource" id="Resource_ke4hf"]
+script = ExtResource("4_8yb7b")
+_points = {
+0: SubResource("Resource_ffx24"),
+1: SubResource("Resource_sukyl"),
+2: SubResource("Resource_op4u2"),
+3: SubResource("Resource_s8udm"),
+4: SubResource("Resource_nx25r")
+}
+_point_order = PackedInt32Array(4, 3, 2, 1, 0)
+_constraints = {
+Vector2i(0, 4): 15
+}
+_next_key = 5
+
+[sub_resource type="Resource" id="Resource_muavq"]
+script = ExtResource("6_jhqhn")
+
 [node name="level_1" type="Node2D" unique_id=634582132]
 
 [node name="ground" type="StaticBody2D" parent="." unique_id=1639850614]
@@ -184,10 +224,26 @@ metadata/_custom_type_script = "uid://dhdc4b8yddyej"
 polygon = PackedVector2Array(-4708.899, -2.1074219, 932.77075, 324.33984, 5187.5117, 357.96045, 6857.4663, 233.1587, 7476.103, 121.70346, 7911.66, -27.655273, 8702.122, -321.7569, 9685.051, -543.3673, 14004.312, -1237.3344, 14796.736, -1495.8167, 15097, -1656.109, 15320.491, -1841.5391, 15528.637, -2013.0786, 15785.416, -2133.5408, 16085.044, -2209.0146, 16421.736, -2245.5908, 18023.46, -2124.707, 19755.469, -1868.626, 20554.639, -1811.6799, 20917.27, -1822.2946, 21247.555, -1867.0869, 30061.504, -4524.0493, 31036.98, -4805.319, 32176.379, -4994.775, 34725.93, -5124.7983, 37268.11, -4967.2207, 39360.863, -4575.1445, 39789.344, -4413.3145, 40214.664, -4181.3286, 41057.207, -3553.0325, 42719.418, -1962.1796, 44369.336, -540.93744, 44782.453, -298.6541, 45196.51, -124.65514, 45611.848, -30.47728, 46028.805, -27.657227, 46948.36, -41.61557, 50286.57, 407.91418, 52462.523, 539.6026, 52939.305, 485.35287, 53375.9, 381.79675, 53765.637, 221.71562, 54101.875, -2.109375, 54569.086, -346.83325, 54703.336, -404.82166, 54781.246, -399.2174, 54810.25, -339.5127, 54797.785, -235.19992, 54678.086, 69.28143, 54025.234, 1173.085, -4760.0034, 1070.9004)
 
 [node name="finish" parent="ground" unique_id=1983399488 instance=ExtResource("10_ddtso")]
-position = Vector2(52453, 405)
+position = Vector2(67306, -415)
+
+[node name="ground2" type="StaticBody2D" parent="." unique_id=912512182]
+
+[node name="ss_2d_shape" type="Node2D" parent="ground2" unique_id=1505092782]
+position = Vector2(-1132, -38)
+script = ExtResource("2_tysf0")
+_points = SubResource("Resource_ke4hf")
+shape_material = SubResource("Resource_muavq")
+collision_polygon_node_path = NodePath("../CollisionPolygon2D")
+metadata/_custom_type_script = "uid://dhdc4b8yddyej"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground2" unique_id=2063950717]
+polygon = PackedVector2Array(56646.12, 1305.4648, 56627.117, 4.8554688, 68588.08, -18.370117, 68657.76, 1328.6895)
+
+[node name="brickle" parent="ground2" unique_id=174221569 instance=ExtResource("11_qugyr")]
+position = Vector2(55715, -2375)
 
 [node name="player" parent="." unique_id=76268478 instance=ExtResource("1_eq150")]
-position = Vector2(-77, -1545)
+position = Vector2(48561, -750)
 
 [node name="camera_2d" type="Camera2D" parent="player" unique_id=547115392]
 zoom = Vector2(0.4, 0.4)
@@ -236,3 +292,7 @@ position = Vector2(45898, -408)
 
 [node name="coin_12" parent="coins" unique_id=988482888 instance=ExtResource("13_xc23s")]
 position = Vector2(50501, 37)
+
+[node name="killzone" parent="." unique_id=2126346459 instance=ExtResource("14_n5g8f")]
+position = Vector2(48399.996, 6512)
+scale = Vector2(1000, 40.121)
