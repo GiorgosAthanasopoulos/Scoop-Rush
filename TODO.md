@@ -1,4 +1,3 @@
 - Hooks (to grapple from)
 - Rings of fire
 - Hot wheels-like loops
-- Finish point

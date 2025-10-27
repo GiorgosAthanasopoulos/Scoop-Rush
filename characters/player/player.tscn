@@ -7,7 +7,7 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5dc8e"]
 
-[node name="player" type="RigidBody2D" unique_id=76268478 node_paths=PackedStringArray("wheels")]
+[node name="player" type="RigidBody2D" unique_id=76268478 node_paths=PackedStringArray("wheels") groups=["player"]]
 physics_material_override = SubResource("PhysicsMaterial_5dc8e")
 script = ExtResource("1_5dc8e")
 wheels = [NodePath("left_wheel_pin_joint/wheel"), NodePath("right_wheel_pin_joint/wheel")]

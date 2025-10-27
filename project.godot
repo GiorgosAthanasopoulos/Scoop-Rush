@@ -21,6 +21,10 @@ run/main_scene="uid://dkkfq2k3276ns"
 config/features=PackedStringArray("4.6")
 config/icon="res://assets/icons/launcher/icon.svg"
 
+[autoload]
+
+Signals="*res://scripts/signals.gd"
+
 [debug]
 
 file_logging/enable_file_logging=true
@@ -54,6 +58,10 @@ version_control/autoload_on_startup=true
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/rmsmartshape/plugin.cfg")
+
+[global_group]
+
+player=""
 
 [input]
 

@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxa0t1yohjcop"]
+
+[ext_resource type="Script" uid="uid://chhcb1ei1n642" path="res://ui/game/hud/scripts/cargo_counter.gd" id="1_rnu65"]
+
+[node name="hud" type="Control" unique_id=1399470084]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="canvas_layer" type="CanvasLayer" parent="." unique_id=976843883]
+
+[node name="h_box_container" type="HBoxContainer" parent="canvas_layer" unique_id=38165725]
+offset_right = 141.0
+offset_bottom = 88.0
+
+[node name="cargo_counter" type="Label" parent="canvas_layer/h_box_container" unique_id=407668742]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Cargo: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_rnu65")
