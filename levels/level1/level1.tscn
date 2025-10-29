@@ -1,6 +1,8 @@
-[gd_scene load_steps=68 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=71 format=4 uid="uid://dkkfq2k3276ns"]
 
+[ext_resource type="Texture2D" uid="uid://ci2r8xy00f4cv" path="res://levels/art/Clouds (new).png" id="1_5i4kv"]
 [ext_resource type="PackedScene" uid="uid://fcyjhs1b2xoo" path="res://characters/player/player.tscn" id="1_eq150"]
+[ext_resource type="Texture2D" uid="uid://djx61wnk3ifgb" path="res://levels/art/Mountains(new).png" id="2_ffx24"]
 [ext_resource type="Script" uid="uid://dhdc4b8yddyej" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_tysf0"]
 [ext_resource type="Script" uid="uid://bwcf4pjgprn0k" path="res://addons/rmsmartshape/shapes/point.gd" id="3_3jy00"]
 [ext_resource type="Script" uid="uid://bo5f7qe27jfje" path="res://addons/rmsmartshape/shapes/point_array.gd" id="4_8yb7b"]
@@ -15,7 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://ui/hud/hud.tscn" id="12_f7y8c"]
 [ext_resource type="PackedScene" uid="uid://d4fmleankm8df" path="res://interactables/cargo/cargo.tscn" id="13_xc23s"]
 [ext_resource type="PackedScene" uid="uid://b3vj3jmn5omwm" path="res://interactables/killzone/killzone.tscn" id="14_n5g8f"]
-[ext_resource type="Texture2D" uid="uid://gfqcip0nkrmo" path="res://levels/art/BG.png" id="16_bntk2"]
+[ext_resource type="Texture2D" uid="uid://bvpu3a4xbxhe1" path="res://levels/art/Crazy sing (new).png" id="17_ghnt0"]
+[ext_resource type="PackedScene" uid="uid://cj7fpj1ukt7wq" path="res://interactables/finish/finish.tscn" id="17_v1ci3"]
 
 [sub_resource type="Resource" id="Resource_ddtso"]
 script = ExtResource("3_3jy00")
@@ -356,15 +359,15 @@ size = Vector2(139, 853.5)
 
 [node name="level_1" type="Node2D" unique_id=634582132]
 
-[node name="parallax_2d" type="Parallax2D" parent="." unique_id=264427781]
-z_index = -3000
-scroll_offset = Vector2(0, 247)
-repeat_size = Vector2(1350, 0)
-repeat_times = 5
+[node name="parallax_2d" type="Parallax2D" parent="." unique_id=1758949597]
 
-[node name="sprite_2d" type="Sprite2D" parent="parallax_2d" unique_id=971507595]
-texture = ExtResource("16_bntk2")
-centered = false
+[node name="sprite_2d" type="Sprite2D" parent="parallax_2d" unique_id=1792108615]
+texture = ExtResource("1_5i4kv")
+
+[node name="parallax_2d_2" type="Parallax2D" parent="." unique_id=587060450]
+
+[node name="sprite_2d" type="Sprite2D" parent="parallax_2d_2" unique_id=69193362]
+texture = ExtResource("2_ffx24")
 
 [node name="hud" parent="." unique_id=1399470084 instance=ExtResource("12_f7y8c")]
 
@@ -427,4 +430,11 @@ position = Vector2(5897, 2494)
 [node name="brickles" type="Node2D" parent="." unique_id=877937571]
 
 [node name="brickle" parent="brickles" unique_id=174221569 instance=ExtResource("11_qugyr")]
-position = Vector2(11713, -537)
+position = Vector2(11808, -711)
+
+[node name="finish" parent="." unique_id=1983399488 instance=ExtResource("17_v1ci3")]
+position = Vector2(16675, 1587)
+
+[node name="crazy_sing_(new)" type="Sprite2D" parent="." unique_id=1131258693]
+position = Vector2(-6039, 779)
+texture = ExtResource("17_ghnt0")

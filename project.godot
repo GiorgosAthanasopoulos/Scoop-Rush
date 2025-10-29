@@ -108,4 +108,4 @@ common/physics_interpolation=true
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.2, 0.59607846, 0.7764706, 1)
+environment/defaults/default_clear_color=Color(0.17254902, 0.33333334, 0.72156864, 1)
