@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=59 format=4 uid="uid://dkkfq2k3276ns"]
 
 [ext_resource type="PackedScene" uid="uid://fcyjhs1b2xoo" path="res://characters/player/player.tscn" id="1_eq150"]
 [ext_resource type="Script" uid="uid://dhdc4b8yddyej" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_tysf0"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://ui/hud/hud.tscn" id="12_f7y8c"]
 [ext_resource type="PackedScene" uid="uid://d4fmleankm8df" path="res://interactables/cargo/cargo.tscn" id="13_xc23s"]
 [ext_resource type="PackedScene" uid="uid://b3vj3jmn5omwm" path="res://interactables/killzone/killzone.tscn" id="14_n5g8f"]
+[ext_resource type="Texture2D" uid="uid://gfqcip0nkrmo" path="res://levels/art/BG.png" id="16_bntk2"]
 
 [sub_resource type="Resource" id="Resource_bntk2"]
 script = ExtResource("3_3jy00")
@@ -317,6 +318,13 @@ _edge_meta_materials = Array[ExtResource("5_gw1fo")]([SubResource("Resource_nc60
 fill_textures = Array[Texture2D]([ExtResource("6_gw1fo")])
 
 [node name="level_1" type="Node2D" unique_id=634582132]
+
+[node name="parallax_2d" type="Parallax2D" parent="." unique_id=2101157930]
+repeat_size = Vector2(1350, 0)
+repeat_times = 5
+
+[node name="sprite_2d" type="Sprite2D" parent="parallax_2d" unique_id=785982176]
+texture = ExtResource("16_bntk2")
 
 [node name="ground" type="StaticBody2D" parent="." unique_id=1639850614]
 
