@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxa0t1yohjcop"]
+[gd_scene load_steps=4 format=3 uid="uid://cxa0t1yohjcop"]
 
+[ext_resource type="Texture2D" uid="uid://lfmhumns45ok" path="res://levels/art/Clouds.png" id="1_4d6w6"]
 [ext_resource type="Script" uid="uid://chhcb1ei1n642" path="res://ui/hud/scripts/cargo_counter.gd" id="1_rnu65"]
+[ext_resource type="Script" uid="uid://bbl4e828j5yet" path="res://ui/hud/scripts/controls_timer.gd" id="3_e0nub"]
 
 [node name="hud" type="Control" unique_id=1399470084]
+z_index = -100
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,6 +14,22 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="canvas_layer" type="CanvasLayer" parent="." unique_id=976843883]
+layer = -100
+
+[node name="parallax_2d" type="Parallax2D" parent="canvas_layer" unique_id=1473625492]
+repeat_size = Vector2(2048, 0)
+repeat_times = 1000
+
+[node name="texture_rect" type="TextureRect" parent="canvas_layer/parallax_2d" unique_id=538544509]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -1.0
+offset_top = -264.0
+offset_right = 2047.0
+offset_bottom = 1272.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_4d6w6")
 
 [node name="h_box_container" type="HBoxContainer" parent="canvas_layer" unique_id=38165725]
 offset_right = 141.0
@@ -23,3 +42,27 @@ text = "Cargo: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_rnu65")
+
+[node name="v_box_container" type="VBoxContainer" parent="canvas_layer" unique_id=1937738009]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -252.0
+offset_right = 252.0
+offset_bottom = 255.0
+grow_horizontal = 2
+
+[node name="label" type="Label" parent="canvas_layer/v_box_container" unique_id=1632421859]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "W/S to accelerate
+A/D to turn
+SPACE to jump"
+
+[node name="timer" type="Timer" parent="canvas_layer/v_box_container/label" unique_id=1541207853]
+wait_time = 5.0
+one_shot = true
+autostart = true
+script = ExtResource("3_e0nub")
+
+[connection signal="timeout" from="canvas_layer/v_box_container/label/timer" to="canvas_layer/v_box_container/label/timer" method="_on_timeout"]

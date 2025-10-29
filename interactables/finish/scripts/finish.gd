@@ -9,5 +9,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group(player_group):
 		var error: Error = get_tree().reload_current_scene()
 		if error != OK:
-			print(error)
+			push_error("Failed to reload level(finish): " + error_string(error))
 

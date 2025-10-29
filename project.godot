@@ -14,10 +14,10 @@ ss2d/version="3.3.0"
 
 [application]
 
-config/name="The Fast and the Fractured"
+config/name="Scoop Rush"
 config/description="MashUp Game Jam '25 Entry."
 config/version="0.0.1"
-run/main_scene="uid://dkkfq2k3276ns"
+run/main_scene="uid://d0p7wpp615xah"
 config/features=PackedStringArray("4.6")
 config/icon="res://icons/launcher/icon.svg"
 
@@ -108,4 +108,4 @@ common/physics_interpolation=true
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.5137255, 0.83137256, 0.92941177, 1)
+environment/defaults/default_clear_color=Color(0.2, 0.59607846, 0.7764706, 1)

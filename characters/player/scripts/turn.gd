@@ -30,7 +30,7 @@ func _handle_flipping(delta: float) -> void:
 	if needs_to_restart:
 		var error: Error = get_tree().reload_current_scene()
 		if error != OK:
-			print(error_string(error))
+			push_error("Failed to reload level(turn): " + error_string(error))
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed(&'turn_left'):
