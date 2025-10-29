@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bl80yilenf6hw"]
 
-[ext_resource type="Script" uid="uid://coy0gqnreh0rj" path="res://characters/player/scripts/wheel.gd" id="1_6vija"]
+[ext_resource type="Script" uid="uid://coy0gqnreh0rj" path="res://characters/player/scripts/accelerate.gd" id="1_6vija"]
 [ext_resource type="Texture2D" uid="uid://bmv3qus4s6smq" path="res://characters/player/art/wheels/Wheels with texture (new).png" id="2_6vija"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6vija"]
