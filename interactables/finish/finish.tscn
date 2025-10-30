@@ -4,12 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dpm02315lvf32" path="res://interactables/finish/art/Finish flag.png" id="2_vdwx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdwx7"]
-size = Vector2(128, 128)
+size = Vector2(368, 580)
 
 [node name="finish" type="Area2D" unique_id=1983399488]
 script = ExtResource("1_7u44c")
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=74525863]
+position = Vector2(-78, 213)
 shape = SubResource("RectangleShape2D_vdwx7")
 
 [node name="sprite_2d" type="Sprite2D" parent="." unique_id=523670644]

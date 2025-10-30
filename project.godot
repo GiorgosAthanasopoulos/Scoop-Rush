@@ -24,6 +24,7 @@ config/icon="res://icons/launcher/icon.svg"
 [autoload]
 
 Signals="*res://global_scripts/signals.gd"
+Settings="*res://global_scripts/settings.gd"
 
 [debug]
 

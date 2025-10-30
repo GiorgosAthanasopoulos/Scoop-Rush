@@ -1,8 +1,6 @@
-[gd_scene load_steps=71 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=70 format=4 uid="uid://dkkfq2k3276ns"]
 
-[ext_resource type="Texture2D" uid="uid://ci2r8xy00f4cv" path="res://levels/art/Clouds (new).png" id="1_5i4kv"]
 [ext_resource type="PackedScene" uid="uid://fcyjhs1b2xoo" path="res://characters/player/player.tscn" id="1_eq150"]
-[ext_resource type="Texture2D" uid="uid://djx61wnk3ifgb" path="res://levels/art/Mountains(new).png" id="2_ffx24"]
 [ext_resource type="Script" uid="uid://dhdc4b8yddyej" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_tysf0"]
 [ext_resource type="Script" uid="uid://bwcf4pjgprn0k" path="res://addons/rmsmartshape/shapes/point.gd" id="3_3jy00"]
 [ext_resource type="Script" uid="uid://bo5f7qe27jfje" path="res://addons/rmsmartshape/shapes/point_array.gd" id="4_8yb7b"]
@@ -17,8 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://ui/hud/hud.tscn" id="12_f7y8c"]
 [ext_resource type="PackedScene" uid="uid://d4fmleankm8df" path="res://interactables/cargo/cargo.tscn" id="13_xc23s"]
 [ext_resource type="PackedScene" uid="uid://b3vj3jmn5omwm" path="res://interactables/killzone/killzone.tscn" id="14_n5g8f"]
-[ext_resource type="Texture2D" uid="uid://bvpu3a4xbxhe1" path="res://levels/art/Crazy sing (new).png" id="17_ghnt0"]
+[ext_resource type="Texture2D" uid="uid://bvpu3a4xbxhe1" path="res://levels/art/Crazy sign (new).png" id="17_ghnt0"]
 [ext_resource type="PackedScene" uid="uid://cj7fpj1ukt7wq" path="res://interactables/finish/finish.tscn" id="17_v1ci3"]
+[ext_resource type="AudioStream" uid="uid://be0keeqpr3wi8" path="res://assets/music/v1/ice cream house ogg.ogg" id="20_ffx24"]
 
 [sub_resource type="Resource" id="Resource_ddtso"]
 script = ExtResource("3_3jy00")
@@ -359,17 +358,8 @@ size = Vector2(139, 853.5)
 
 [node name="level_1" type="Node2D" unique_id=634582132]
 
-[node name="parallax_2d" type="Parallax2D" parent="." unique_id=1758949597]
-
-[node name="sprite_2d" type="Sprite2D" parent="parallax_2d" unique_id=1792108615]
-texture = ExtResource("1_5i4kv")
-
-[node name="parallax_2d_2" type="Parallax2D" parent="." unique_id=587060450]
-
-[node name="sprite_2d" type="Sprite2D" parent="parallax_2d_2" unique_id=69193362]
-texture = ExtResource("2_ffx24")
-
 [node name="hud" parent="." unique_id=1399470084 instance=ExtResource("12_f7y8c")]
+metadata/_edit_use_anchors_ = true
 
 [node name="ground" type="StaticBody2D" parent="." unique_id=2138066556]
 position = Vector2(23, 697)
@@ -402,7 +392,7 @@ polygon = PackedVector2Array(12986.87, 1304.2241, 15179.816, 2114.6604, 17587.28
 position = Vector2(-6869, 1136)
 
 [node name="camera_2d" type="Camera2D" parent="player" unique_id=547115392]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.3, 0.3)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -438,3 +428,9 @@ position = Vector2(16675, 1587)
 [node name="crazy_sing_(new)" type="Sprite2D" parent="." unique_id=1131258693]
 position = Vector2(-6039, 779)
 texture = ExtResource("17_ghnt0")
+
+[node name="bg_music" type="AudioStreamPlayer" parent="." unique_id=1592117127]
+stream = ExtResource("20_ffx24")
+volume_db = -15.143
+autoplay = true
+bus = &"Music"
