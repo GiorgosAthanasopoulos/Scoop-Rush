@@ -17,11 +17,14 @@ func _ready() -> void:
 func _on_sfx_volume_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("SFX"), value / 100)
 	Settings.sfx_volume = int(value)
+	Settings.save_settings()
 
 func _on_music_volume_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Music"), value / 100)
 	Settings.music_volume = int(value)
+	Settings.save_settings()
 
 func _on_master_volume_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Master"), value / 100)
 	Settings.master_volume = int(value)
+	Settings.save_settings()
