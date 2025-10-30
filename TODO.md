@@ -1,3 +1,4 @@
+- Escape/Pause menu
 - Rings of fire (adds overheat)
 - Boost (Bar + Pickups + maybe fix impulse/force?)
 - Hot wheels-like loops
@@ -14,3 +15,4 @@
 - Env props
 - Main Menu (bg + icons)
 - Settings (icons)
+- Game icon
