@@ -6,12 +6,12 @@ extends Node2D
 @onready var _player: RigidBody2D = get_parent() as RigidBody2D
 
 func _input(event: InputEvent) -> void:
-    if event.is_action_pressed("jump"):
-        _jump()
+	if event.is_action_pressed("jump"):
+		_jump()
 
 func _jump() -> void:
-    if _is_on_ground():
-        _player.apply_central_impulse(Vector2(0, -jump_force))
+	if _is_on_ground():
+		_player.apply_central_impulse(Vector2(0, -jump_force))
 
 func _is_on_ground() -> bool:
-    return ground_ray.is_colliding()
+	return ground_ray.is_colliding()

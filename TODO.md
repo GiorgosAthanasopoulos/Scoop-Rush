@@ -1,8 +1,10 @@
-- Rings of fire
+- Rings of fire (anim + overheat?)
 - Hot wheels-like loops
 - Boost (Bar + Pickups)
 - Overheat (after too much boost?)
 - Build the level (env props)
 - Main menu (bg + icons)
 - Settings (icons)
+- HUD (icons)
+- Debug build to team for testing + bug fixing
 - Hooks (to grapple from)

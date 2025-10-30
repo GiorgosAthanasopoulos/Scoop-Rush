@@ -10,4 +10,3 @@ func _ready() -> void:
 func _on_cargo_collected() -> void:
 	_cargo += 1
 	text = "Cargo: " + str(_cargo)
-

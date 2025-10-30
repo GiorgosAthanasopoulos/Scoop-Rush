@@ -30,12 +30,12 @@ func _on_master_volume_slider_value_changed(value: float) -> void:
 	Settings.save_settings()
 
 func _on_back_button_pressed() -> void:
-	var error: Error = get_tree().change_scene_to_file('res://ui/menu/menu.tscn')
+	var error: Error = get_tree().change_scene_to_file('res://scenes/ui/meun/menu.tscn')
 	if error != OK:
 		push_error(error_string(error))
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("ui_cancel"):
-		var error: Error = get_tree().change_scene_to_file('res://ui/menu/menu.tscn')
+		var error: Error = get_tree().change_scene_to_file('res://scenes/ui/meun/menu.tscn')
 		if error != OK:
 			push_error(error_string(error))

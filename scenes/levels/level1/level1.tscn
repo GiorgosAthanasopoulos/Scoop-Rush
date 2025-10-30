@@ -362,13 +362,12 @@ size = Vector2(139, 853.5)
 [node name="hud" parent="." unique_id=1399470084 instance=ExtResource("1_lv1b3")]
 metadata/_edit_use_anchors_ = true
 
-[node name="ring_of_fire" parent="." unique_id=381231388 instance=ExtResource("2_or0go")]
-position = Vector2(16291, 1708)
+[node name="ground" type="Node2D" parent="." unique_id=901300147]
 
-[node name="ground" type="StaticBody2D" parent="." unique_id=2138066556]
+[node name="ground" type="StaticBody2D" parent="ground" unique_id=2138066556]
 position = Vector2(23, 697)
 
-[node name="ss_2d_shape" type="Node2D" parent="ground" unique_id=1421881234]
+[node name="ss_2d_shape" type="Node2D" parent="ground/ground" unique_id=1421881234]
 script = ExtResource("3_ei1ye")
 _points = SubResource("Resource_gw1fo")
 _meshes = Array[ExtResource("6_ohl02")]([SubResource("Resource_op4u2"), SubResource("Resource_nx25r"), SubResource("Resource_muavq"), SubResource("Resource_s8udm")])
@@ -376,12 +375,12 @@ shape_material = SubResource("Resource_jhqhn")
 collision_polygon_node_path = NodePath("../CollisionPolygon2D")
 metadata/_custom_type_script = "uid://dhdc4b8yddyej"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground" unique_id=1439376726]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground/ground" unique_id=1439376726]
 polygon = PackedVector2Array(-10532.701, 1011.0996, -5973.9824, 918.4768, -5085.536, 344.23706, -3698.6934, 344.23706, -2647.726, -56.647217, -719.14746, -67.48193, 1137.1201, 994.5586, 3488.2256, 961.92456, 4778.542, 2055.2483, 6984.8833, 2084.7976, 7953.091, 1182.9686, 9368.5205, 1011.176, 10495.578, 630.5591, 10614.762, 3704.2856, -10523.665, 3645.73)
 
-[node name="ground_2" type="StaticBody2D" parent="." unique_id=1752862032]
+[node name="ground_2" type="StaticBody2D" parent="ground" unique_id=1752862032]
 
-[node name="ss_2d_shape" type="Node2D" parent="ground_2" unique_id=677197042]
+[node name="ss_2d_shape" type="Node2D" parent="ground/ground_2" unique_id=677197042]
 script = ExtResource("3_ei1ye")
 _points = SubResource("Resource_8ghno")
 _meshes = Array[ExtResource("6_ohl02")]([SubResource("Resource_dxl77"), SubResource("Resource_qye81"), SubResource("Resource_15n53"), SubResource("Resource_nc60i"), SubResource("Resource_fw05y")])
@@ -389,7 +388,7 @@ shape_material = SubResource("Resource_mcum3")
 collision_polygon_node_path = NodePath("../CollisionPolygon2D")
 metadata/_custom_type_script = "uid://dhdc4b8yddyej"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_2" unique_id=1542981546]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground/ground_2" unique_id=1542981546]
 polygon = PackedVector2Array(12986.87, 1304.2241, 15179.816, 2114.6604, 20221.2, 2162.3333, 20233.12, 4498.298, 12927.273, 4438.7065)
 
 [node name="player" parent="." unique_id=76268478 instance=ExtResource("13_rbqk0")]
@@ -429,12 +428,19 @@ position = Vector2(11808, -711)
 [node name="finish" parent="." unique_id=1983399488 instance=ExtResource("17_lh23y")]
 position = Vector2(19416, 1599)
 
-[node name="crazy_sing_(new)" type="Sprite2D" parent="." unique_id=1131258693]
-position = Vector2(-6039, 779)
-texture = ExtResource("18_f0r81")
-
 [node name="bg_music" type="AudioStreamPlayer" parent="." unique_id=1592117127]
 stream = ExtResource("19_bby6e")
 volume_db = -15.143
 autoplay = true
 bus = &"Music"
+
+[node name="obstacles" type="Node2D" parent="." unique_id=1283693588]
+
+[node name="ring_of_fire" parent="obstacles" unique_id=381231388 instance=ExtResource("2_or0go")]
+position = Vector2(17624, 1708)
+
+[node name="env_props" type="Node2D" parent="." unique_id=1067829832]
+
+[node name="crazy_sign_(new)" type="Sprite2D" parent="env_props" unique_id=1131258693]
+position = Vector2(-6039, 779)
+texture = ExtResource("18_f0r81")
