@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=71 format=4 uid="uid://dkkfq2k3276ns"]
 
 [ext_resource type="PackedScene" uid="uid://fcyjhs1b2xoo" path="res://characters/player/player.tscn" id="1_eq150"]
 [ext_resource type="Script" uid="uid://dhdc4b8yddyej" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_tysf0"]
@@ -17,7 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://b3vj3jmn5omwm" path="res://interactables/killzone/killzone.tscn" id="14_n5g8f"]
 [ext_resource type="Texture2D" uid="uid://bvpu3a4xbxhe1" path="res://levels/art/Crazy sign (new).png" id="17_ghnt0"]
 [ext_resource type="PackedScene" uid="uid://cj7fpj1ukt7wq" path="res://interactables/finish/finish.tscn" id="17_v1ci3"]
-[ext_resource type="AudioStream" uid="uid://be0keeqpr3wi8" path="res://assets/music/v1/ice cream house ogg.ogg" id="20_ffx24"]
+[ext_resource type="AudioStream" uid="uid://cir08vqqpra5r" path="res://assets/music/v2/scoop city_demo.mp3" id="18_5i4kv"]
+[ext_resource type="PackedScene" uid="uid://i08itc3ggh8n" path="res://interactables/ring_of_fire/ring_of_fire.tscn" id="19_5i4kv"]
 
 [sub_resource type="Resource" id="Resource_ddtso"]
 script = ExtResource("3_3jy00")
@@ -212,11 +213,11 @@ position = Vector2(15179.816, 2114.6604)
 
 [sub_resource type="Resource" id="Resource_x0akt"]
 script = ExtResource("3_3jy00")
-position = Vector2(17587.281, 2114.6604)
+position = Vector2(20221.2, 2162.3333)
 
 [sub_resource type="Resource" id="Resource_lvnai"]
 script = ExtResource("3_3jy00")
-position = Vector2(17718.383, 4450.625)
+position = Vector2(20233.12, 4498.298)
 
 [sub_resource type="Resource" id="Resource_wwup8"]
 script = ExtResource("3_3jy00")
@@ -244,15 +245,15 @@ _next_key = 6
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_v1ci3"]
 _surfaces = [{
-"aabb": AABB(12927.273, 1304.2241, 0, 4791.1094, 3146.401, 1e-05),
-"attribute_data": PackedByteArray("/////0Qv7UKRKoRBRC/tQpEqhEH/////kGYJQ5EqhEGQZglDkSqEQf/////EbApDABULQsRsCkMAFQtC/////xj9yUKntQpCGP3JQqe1CkL/////e+vKQiwHI0F768pCLAcjQQ=="),
+"aabb": AABB(12927.273, 1304.2241, 0, 7305.8457, 3194.0737, 1e-05),
+"attribute_data": PackedByteArray("/////0Qv7UKRKoRBRC/tQpEqhEH/////ZvodQ1Ulh0Fm+h1DVSWHQf////89Eh5DYpIMQj0SHkNikgxC/////xj9yUKntQpCGP3JQqe1CkL/////e+vKQiwHI0F768pCLAcjQQ=="),
 "format": 34359742527,
 "index_count": 12,
 "index_data": PackedByteArray("AAABAAIAAAACAAMAAwAEAAQABAAAAAMA"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 5,
-"vertex_data": PackedByteArray("RC9tRpEqBEUAAAAAkGaJRpEqBEUAAAAAxGyKRgAVi0UAAAAAGP1JRqe1ikUAAAAAe+tKRiwHo0QAAAAA/////////7//////////v/////////+//////////7//////////vw==")
+"vertex_data": PackedByteArray("RC9tRpEqBEUAAAAAZvqdRlUlB0UAAAAAPRKeRmKSjEUAAAAAGP1JRqe1ikUAAAAAe+tKRiwHo0QAAAAA/////////7//////////v/////////+//////////7//////////vw==")
 }]
 
 [sub_resource type="Resource" id="Resource_dxl77"]
@@ -263,15 +264,15 @@ z_index = -10
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_nc60i"]
 _surfaces = [{
-"aabb": AABB(12950.792, 1251.3627, 0, 4576.075, 927.19714, 1e-05),
-"attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////8z1JNBAACAPzPUk0EAAIA//////zPUk0EAAAAAM9STQQAAAAD/////AAAUQgAAgD8AABRCAACAP/////8AABRCAAAAAAAAFEIAAAAA"),
+"aabb": AABB(12950.792, 1251.3627, 0, 7206.7373, 974.3646, 1e-05),
+"attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////9RvJFBAACAP1G8kUEAAIA//////1G8kUEAAAAAUbyRQQAAAAD/////AABkQgAAgD8AAGRCAACAP/////8AAGRCAAAAAAAAZEIAAAAA"),
 "format": 34359742527,
 "index_count": 12,
 "index_data": PackedByteArray("AAABAAIAAAACAAMAAwACAAQAAwAEAAUA"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 6,
-"vertex_data": PackedByteArray("K1tKRptrnEQAAAAAy3tLRr2iqUQAAAAAMQJtRpEaCEUAAAAAV1xtRpE6AEUAAAAAvO2IRvUoCEUAAAAAZN+IRi0sAEUAAAAA/3//f7rcXS7/f/9/ltxLLv9//38f7Y82/3//fyHtkTb/f/9/8/8FQP9//3/y/wZA")
+"vertex_data": PackedByteArray("K1tKRptrnEQAAAAAy3tLRr2iqUQAAAAAAAFtRrQZCEUAAAAAiF1tRm47AEUAAAAAD3udRqMbC0UAAAAAwHmdRqobA0UAAAAA/3//f7rcXS7/f/9/ldxLLv9//3+t7Fc2/3//f6/sWDb/f/9/0f5pP/9//3/S/mk/")
 }]
 
 [sub_resource type="Resource" id="Resource_qye81"]
@@ -281,7 +282,7 @@ mesh = SubResource("ArrayMesh_nc60i")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fw05y"]
 _surfaces = [{
-"aabb": AABB(17526.867, 2178.5598, 0, 251.92969, 2208.325, 1e-05),
+"aabb": AABB(20157.53, 2225.7273, 0, 139.26172, 2209.0935, 1e-05),
 "attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////8AAIhBAACAPwAAiEEAAIA//////wAAiEEAAAAAAACIQQAAAAA="),
 "format": 34359742527,
 "index_count": 6,
@@ -289,7 +290,7 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray("vO2JRvUoCEUAAAAAvO2IRvUoCEUAAAAAmOWJRogUiUUAAAAAmOWKRhQXiUUAAAAA/3//f8yGZgP/f/9/zIZmA/9//3/MhmYD/3//f8yGZgM=")
+"vertex_data": PackedByteArray("DHueRgAvC0UAAAAAD3udRqMbC0UAAAAAl5GdRjeOikUAAAAAlZGeRpGWikUAAAAA/3//f6WAUwD/f/9/pYBTAP9//3+lgFMA/3//f6WAUwA=")
 }]
 
 [sub_resource type="Resource" id="Resource_15n53"]
@@ -297,27 +298,27 @@ script = ExtResource("5_8yb7b")
 texture = ExtResource("10_5i4kv")
 mesh = SubResource("ArrayMesh_fw05y")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cy7g5"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ffx24"]
 _surfaces = [{
-"aabb": AABB(12990.057, 4374.8774, 0, 4667.912, 139.4878, 1e-05),
-"attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////8AABBCAACAPwAAEEIAAIA//////wAAEEIAAAAAAAAQQgAAAAA="),
+"aabb": AABB(12990.055, 4375.24, 0, 7179.3926, 186.53467, 1e-05),
+"attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////8AAGBCAACAPwAAYEIAAIA//////wAAYEIAAAAAAABgQgAAAAA="),
 "format": 34359742527,
 "index_count": 6,
 "index_data": PackedByteArray("AAABAAIAAAACAAMA"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray("8POJRuwSjUUAAAAAmOWJRogUiUUAAAAA9gFLRgW3iEUAAAAAOvhKRtW2jEUAAAAA/3//f1EAKED/f/9/UgAoQP9//39QAChA/3//f1AAKEA=")
+"vertex_data": PackedByteArray("5ZKdRjOOjkUAAAAAl5GdRjeOikUAAAAA9AFLRuy5iEUAAAAAOPhKRry5jEUAAAAA/3//fwkBhED/f/9/CQGEQP9//38JAYRA/3//fwkBhEA=")
 }]
 
-[sub_resource type="Resource" id="Resource_jwlgd"]
+[sub_resource type="Resource" id="Resource_nc60i"]
 script = ExtResource("5_8yb7b")
 texture = ExtResource("10_5i4kv")
-mesh = SubResource("ArrayMesh_cy7g5")
+mesh = SubResource("ArrayMesh_ffx24")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_7vc8q"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_qye81"]
 _surfaces = [{
-"aabb": AABB(12864.49, 1251.3627, 0, 158.45801, 3123.5146, 1e-05),
+"aabb": AABB(12864.492, 1251.3627, 0, 158.45605, 3123.8774, 1e-05),
 "attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////8AAMBBAACAPwAAwEEAAIA//////wAAwEEAAAAAAADAQQAAAAA="),
 "format": 34359742527,
 "index_count": 6,
@@ -325,13 +326,13 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray("9gFJRnm0iEUAAAAA9gFLRgW3iEUAAAAAy3tLRr2iqUQAAAAAK1tKRptrnEQAAAAA/3//f0+BV3//f/9/RoFbf/9//39ng0t+/3//f3CDRn4=")
+"vertex_data": PackedByteArray("+AFJRpKxiEUAAAAA9AFLRuy5iEUAAAAAy3tLRr2iqUQAAAAAK1tKRptrnEQAAAAA/3//f0+BV3//f/9/RoFbf/9//39ng0t+/3//f3CDRn4=")
 }]
 
-[sub_resource type="Resource" id="Resource_cisti"]
+[sub_resource type="Resource" id="Resource_fw05y"]
 script = ExtResource("5_8yb7b")
 texture = ExtResource("10_5i4kv")
-mesh = SubResource("ArrayMesh_7vc8q")
+mesh = SubResource("ArrayMesh_qye81")
 
 [sub_resource type="Resource" id="Resource_14loe"]
 script = ExtResource("8_jhqhn")
@@ -380,13 +381,13 @@ polygon = PackedVector2Array(-10532.701, 1011.0996, -5973.9824, 918.4768, -5085.
 [node name="ss_2d_shape" type="Node2D" parent="ground_2" unique_id=677197042]
 script = ExtResource("2_tysf0")
 _points = SubResource("Resource_8ghno")
-_meshes = Array[ExtResource("5_8yb7b")]([SubResource("Resource_dxl77"), SubResource("Resource_qye81"), SubResource("Resource_15n53"), SubResource("Resource_jwlgd"), SubResource("Resource_cisti")])
+_meshes = Array[ExtResource("5_8yb7b")]([SubResource("Resource_dxl77"), SubResource("Resource_qye81"), SubResource("Resource_15n53"), SubResource("Resource_nc60i"), SubResource("Resource_fw05y")])
 shape_material = SubResource("Resource_mcum3")
 collision_polygon_node_path = NodePath("../CollisionPolygon2D")
 metadata/_custom_type_script = "uid://dhdc4b8yddyej"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_2" unique_id=1542981546]
-polygon = PackedVector2Array(12986.87, 1304.2241, 15179.816, 2114.6604, 17587.281, 2114.6604, 17718.383, 4450.625, 12927.273, 4438.7065)
+polygon = PackedVector2Array(12986.87, 1304.2241, 15179.816, 2114.6604, 20221.2, 2162.3333, 20233.12, 4498.298, 12927.273, 4438.7065)
 
 [node name="player" parent="." unique_id=76268478 instance=ExtResource("1_eq150")]
 position = Vector2(-6869, 1136)
@@ -423,14 +424,17 @@ position = Vector2(5897, 2494)
 position = Vector2(11808, -711)
 
 [node name="finish" parent="." unique_id=1983399488 instance=ExtResource("17_v1ci3")]
-position = Vector2(16675, 1587)
+position = Vector2(19416, 1599)
 
 [node name="crazy_sing_(new)" type="Sprite2D" parent="." unique_id=1131258693]
 position = Vector2(-6039, 779)
 texture = ExtResource("17_ghnt0")
 
 [node name="bg_music" type="AudioStreamPlayer" parent="." unique_id=1592117127]
-stream = ExtResource("20_ffx24")
+stream = ExtResource("18_5i4kv")
 volume_db = -15.143
 autoplay = true
 bus = &"Music"
+
+[node name="ring_of_fire" parent="." unique_id=381231388 instance=ExtResource("19_5i4kv")]
+position = Vector2(16291, 1675)

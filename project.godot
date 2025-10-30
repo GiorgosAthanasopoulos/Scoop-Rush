@@ -19,7 +19,7 @@ config/description="MashUp Game Jam '25 Entry."
 config/version="0.0.1"
 run/main_scene="uid://d0p7wpp615xah"
 config/features=PackedStringArray("4.6")
-config/icon="res://icons/launcher/icon.svg"
+config/icon="res://assets/icons/launcher/icon.svg"
 
 [autoload]
 
@@ -64,6 +64,10 @@ enabled=PackedStringArray("res://addons/rmsmartshape/plugin.cfg")
 
 player=""
 brickle=""
+
+[gui]
+
+theme/custom_font="uid://05o2q4tktnxr"
 
 [input]
 

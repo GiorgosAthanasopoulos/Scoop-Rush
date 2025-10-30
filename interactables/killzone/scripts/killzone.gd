@@ -6,7 +6,5 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group(player_group):
-		var error: Error = get_tree().reload_current_scene()
-		if error != OK:
-			push_error("Failed to reload level(killzone): " + error_string(error))
+		get_tree().call_deferred("reload_current_scene")
 
