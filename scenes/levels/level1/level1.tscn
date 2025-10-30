@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=72 format=4 uid="uid://dkkfq2k3276ns"]
 
 [ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://scenes/ui/hud/hud.tscn" id="1_lv1b3"]
 [ext_resource type="PackedScene" uid="uid://i08itc3ggh8n" path="res://scenes/interactables/ring_of_fire/ring_of_fire.tscn" id="2_or0go"]
@@ -355,7 +355,10 @@ _edge_meta_materials = Array[ExtResource("9_n5wss")]([SubResource("Resource_ri7h
 fill_textures = Array[Texture2D]([ExtResource("7_x0doa")])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qugyr"]
-size = Vector2(139, 853.5)
+size = Vector2(150, 1538.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lv1b3"]
+size = Vector2(150, 2123)
 
 [node name="level_1" type="Node2D" unique_id=634582132]
 
@@ -406,12 +409,6 @@ editor_draw_drag_margin = true
 position = Vector2(171642, 7280)
 scale = Vector2(3000, 40.121)
 
-[node name="wall" type="StaticBody2D" parent="." unique_id=1792035234]
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="wall" unique_id=883050597]
-position = Vector2(-7428, 1138)
-shape = SubResource("RectangleShape2D_qugyr")
-
 [node name="coins" type="Node2D" parent="." unique_id=909285361]
 
 [node name="coin" parent="coins" unique_id=1111820017 instance=ExtResource("15_h4c5x")]
@@ -444,3 +441,18 @@ position = Vector2(17624, 1708)
 [node name="crazy_sign_(new)" type="Sprite2D" parent="env_props" unique_id=1131258693]
 position = Vector2(-6039, 779)
 texture = ExtResource("18_f0r81")
+
+[node name="world_boundaries" type="Node2D" parent="." unique_id=338985208]
+
+[node name="wall" type="StaticBody2D" parent="world_boundaries" unique_id=1792035234]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="world_boundaries/wall" unique_id=883050597]
+position = Vector2(-7428, 795.375)
+shape = SubResource("RectangleShape2D_qugyr")
+
+[node name="wall_2" type="StaticBody2D" parent="world_boundaries" unique_id=447782738]
+position = Vector2(19988, 1976)
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="world_boundaries/wall_2" unique_id=930861893]
+position = Vector2(-38, -885.5)
+shape = SubResource("RectangleShape2D_lv1b3")

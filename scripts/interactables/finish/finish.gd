@@ -1,8 +1,5 @@
 extends Area2D
 
-# TODO: add finish flag sprite
-# TODO: do something when winning (e.g. go to next level or show win message)
-
 @export var player_group: String = "player"
 
 func _on_body_entered(body: Node2D) -> void:

@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cqmfy0ui4ksrp" path="res://assets/sprites/finish_flag/v2/Finish flag (1).png" id="2_tapdo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdwx7"]
-size = Vector2(368, 580)
+size = Vector2(557, 994)
 
 [node name="finish" type="Area2D" unique_id=1983399488]
 script = ExtResource("1_7u44c")
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=74525863]
-position = Vector2(-78, 213)
+position = Vector2(16.5, 6)
 shape = SubResource("RectangleShape2D_vdwx7")
 
 [node name="sprite_2d" type="Sprite2D" parent="." unique_id=523670644]

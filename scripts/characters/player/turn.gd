@@ -7,7 +7,7 @@ extends Node2D
 @export var flip_limits_deg: Vector2i = Vector2i(100, 260)
 var _flipped_timer: float = 0
 
-@onready var _player: RigidBody2D = get_parent() as RigidBody2D
+@onready var player: RigidBody2D = $'..'
 
 func _turn(_torque: float, delta: float) -> void:
 	var has_air_torque: bool = _torque != 0
@@ -15,10 +15,10 @@ func _turn(_torque: float, delta: float) -> void:
 		return
 
 	var moving_right: bool = Input.is_action_pressed(&'move_right')
-	_player.apply_torque_impulse(_torque * delta if moving_right else _torque / air_torque_left_wheel_divider * delta)
+	player.apply_torque_impulse(_torque * delta if moving_right else _torque / air_torque_left_wheel_divider * delta)
 
 func _handle_flipping(delta: float) -> void:
-	var abs_rotation_deg: float = abs(rad_to_deg(_player.rotation))
+	var abs_rotation_deg: float = abs(rad_to_deg(player.rotation))
 	var has_flipped: bool = abs_rotation_deg > flip_limits_deg.x and abs_rotation_deg < flip_limits_deg.y
 
 	if not has_flipped:

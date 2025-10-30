@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://fcyjhs1b2xoo"]
+[gd_scene load_steps=8 format=3 uid="uid://fcyjhs1b2xoo"]
 
 [ext_resource type="PackedScene" uid="uid://bl80yilenf6hw" path="res://scenes/characters/player/wheel.tscn" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://ccalx84h4enuv" path="res://assets/sprites/car/v2/Car (new).png" id="2_5dc8e"]
 [ext_resource type="PackedScene" uid="uid://da81ukjqkjqi1" path="res://scenes/characters/player/hook.tscn" id="3_686vu"]
 [ext_resource type="Script" uid="uid://syvbalmbfi6a" path="res://scripts/characters/player/turn.gd" id="5_ixbpm"]
+[ext_resource type="Script" uid="uid://mbc7cf37x4ap" path="res://scripts/characters/player/boost.gd" id="6_6avc5"]
 [ext_resource type="Script" uid="uid://b06x53r2ab51s" path="res://scripts/characters/player/jumping.gd" id="6_c6leb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5dc8e"]
@@ -47,3 +48,6 @@ target_position = Vector2(0, 250)
 
 [node name="turning" type="Node2D" parent="." unique_id=1327225139]
 script = ExtResource("5_ixbpm")
+
+[node name="boost" type="Node2D" parent="." unique_id=646095917]
+script = ExtResource("6_6avc5")
