@@ -1,6 +1,6 @@
 extends Node
 
-@export var boost_force : float = 10_000
+@export var boost_force : float = 2_000
 @export var boostInputAction: String = &'boost'
 
 @onready var player: RigidBody2D = $'..'

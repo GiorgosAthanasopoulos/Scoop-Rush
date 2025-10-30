@@ -1,5 +1,5 @@
 - Rings of fire (adds overheat)
-- Boost (Bar + Pickups)
+- Boost (Bar + Pickups + maybe fix impulse/force?)
 - Hot wheels-like loops
 - Overheat (after too much boost? + make self modulate of car sprite more read)
 - Debug build to team for testing + bug fixing
