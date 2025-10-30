@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4fmleankm8df"]
+
+[ext_resource type="Script" uid="uid://cq1lakqlx2ffs" path="res://scripts/interactables/cargo/cargo.gd" id="1_7b51v"]
+[ext_resource type="Texture2D" uid="uid://c5q02nolopwqo" path="res://assets/sprites/cargo/v3/Cargo (new).png" id="2_7b51v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whk3t"]
+size = Vector2(421, 376)
+
+[node name="coin" type="Area2D" unique_id=1111820017]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_7b51v")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=355141683]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_whk3t")
+
+[node name="sprite_2d" type="Sprite2D" parent="." unique_id=1366121627]
+texture = ExtResource("2_7b51v")
+region_enabled = true
+region_rect = Rect2(724, 724, 392, 339)
+region_filter_clip_enabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

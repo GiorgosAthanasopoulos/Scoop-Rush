@@ -1,8 +1,8 @@
-- Hooks (to grapple from)
 - Rings of fire
 - Hot wheels-like loops
-- Build the level (env props)
 - Boost (Bar + Pickups)
 - Overheat (after too much boost?)
+- Build the level (env props)
 - Main menu (bg + icons)
-- Settings (volumes + save/load)
+- Settings (icons)
+- Hooks (to grapple from)

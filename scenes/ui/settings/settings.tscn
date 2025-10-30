@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8ckxayeu8dcr"]
+
+[ext_resource type="Script" uid="uid://k47r3551tgna" path="res://scripts/ui/settings/settings.gd" id="1_347px"]
+[ext_resource type="Texture2D" uid="uid://gfqcip0nkrmo" path="res://assets/sprites/level/BG.png" id="2_osa27"]
+
+[node name="settings" type="Control" unique_id=768899495]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_347px")
+
+[node name="texture_rect" type="TextureRect" parent="." unique_id=1897030887]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_osa27")
+
+[node name="v_box_container" type="VBoxContainer" parent="." unique_id=171112486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="title_label" type="Label" parent="v_box_container" unique_id=253800203]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "Settings"
+
+[node name="h_box_container" type="HBoxContainer" parent="v_box_container" unique_id=650234570]
+layout_mode = 2
+
+[node name="master_volume_label" type="Label" parent="v_box_container/h_box_container" unique_id=2053903476]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Master"
+
+[node name="master_volume_slider" type="HSlider" parent="v_box_container/h_box_container" unique_id=59842024]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 5.0
+rounded = true
+
+[node name="h_box_container_2" type="HBoxContainer" parent="v_box_container" unique_id=289193717]
+layout_mode = 2
+
+[node name="music_volume_label" type="Label" parent="v_box_container/h_box_container_2" unique_id=1760950523]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Music  "
+
+[node name="music_volume_slider" type="HSlider" parent="v_box_container/h_box_container_2" unique_id=1069799513]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 5.0
+rounded = true
+
+[node name="h_box_container_3" type="HBoxContainer" parent="v_box_container" unique_id=1751284193]
+layout_mode = 2
+
+[node name="sfx_volume_label" type="Label" parent="v_box_container/h_box_container_3" unique_id=478003065]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "SFX       "
+
+[node name="sfx_volume_slider" type="HSlider" parent="v_box_container/h_box_container_3" unique_id=1096117084]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+step = 5.0
+rounded = true
+
+[node name="back_button" type="Button" parent="." unique_id=1572845209]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 100
+text = "Back"
+
+[connection signal="value_changed" from="v_box_container/h_box_container/master_volume_slider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="v_box_container/h_box_container_2/music_volume_slider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="v_box_container/h_box_container_3/sfx_volume_slider" to="." method="_on_sfx_volume_slider_value_changed"]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://brli5xhtjs6j"]
+
+[ext_resource type="Script" uid="uid://fpumag5wviy" path="res://scripts/interactables/brickle/brickle.gd" id="1_4blyq"]
+[ext_resource type="Texture2D" uid="uid://wvs33bqg0qd" path="res://assets/sprites/brickle/Hook point(new).png" id="2_4blyq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4blyq"]
+size = Vector2(128, 128)
+
+[node name="brickle" type="Area2D" unique_id=174221569 groups=["brickle"]]
+script = ExtResource("1_4blyq")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=1928381513]
+shape = SubResource("RectangleShape2D_4blyq")
+
+[node name="sprite_2d" type="Sprite2D" parent="." unique_id=993940160]
+texture = ExtResource("2_4blyq")
+region_enabled = true
+region_rect = Rect2(441, 567, 1071, 485)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

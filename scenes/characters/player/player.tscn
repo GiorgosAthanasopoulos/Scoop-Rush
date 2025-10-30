@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://fcyjhs1b2xoo"]
+
+[ext_resource type="PackedScene" uid="uid://bl80yilenf6hw" path="res://scenes/characters/player/wheel.tscn" id="1_ft8w5"]
+[ext_resource type="Texture2D" uid="uid://ccalx84h4enuv" path="res://assets/sprites/car/v2/Car (new).png" id="2_5dc8e"]
+[ext_resource type="PackedScene" uid="uid://da81ukjqkjqi1" path="res://scenes/characters/player/hook.tscn" id="3_686vu"]
+[ext_resource type="Script" uid="uid://syvbalmbfi6a" path="res://scripts/characters/player/turn.gd" id="5_ixbpm"]
+[ext_resource type="Script" uid="uid://b06x53r2ab51s" path="res://scripts/characters/player/jumping.gd" id="6_c6leb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5dc8e"]
+
+[node name="player" type="RigidBody2D" unique_id=76268478 groups=["player"]]
+physics_material_override = SubResource("PhysicsMaterial_5dc8e")
+
+[node name="left_wheel_pin_joint" type="PinJoint2D" parent="." unique_id=147562643]
+position = Vector2(-206, 160)
+node_a = NodePath("..")
+node_b = NodePath("wheel")
+softness = 6.0
+
+[node name="wheel" parent="left_wheel_pin_joint" unique_id=556693885 instance=ExtResource("1_ft8w5")]
+
+[node name="right_wheel_pin_joint" type="PinJoint2D" parent="." unique_id=1977231549]
+position = Vector2(212, 155)
+node_a = NodePath("..")
+node_b = NodePath("wheel")
+softness = 6.0
+
+[node name="wheel" parent="right_wheel_pin_joint" unique_id=1464670969 instance=ExtResource("1_ft8w5")]
+
+[node name="sprite_2d" type="Sprite2D" parent="." unique_id=1253684601]
+texture = ExtResource("2_5dc8e")
+region_enabled = true
+region_rect = Rect2(235, 399, 800, 369)
+region_filter_clip_enabled = true
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="." unique_id=468195840]
+polygon = PackedVector2Array(-353, -139, -371, 130, 393, 132, 397, -23, 244, -91, 215, -180, -319, -184, -340, -169)
+
+[node name="hook" parent="." unique_id=2108884131 instance=ExtResource("3_686vu")]
+position = Vector2(-234, -223)
+
+[node name="jumping" type="Node2D" parent="." unique_id=579503133]
+script = ExtResource("6_c6leb")
+
+[node name="jump_raycast" type="RayCast2D" parent="jumping" unique_id=190421859]
+target_position = Vector2(0, 250)
+
+[node name="turning" type="Node2D" parent="." unique_id=1327225139]
+script = ExtResource("5_ixbpm")

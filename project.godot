@@ -21,10 +21,14 @@ run/main_scene="uid://d0p7wpp615xah"
 config/features=PackedStringArray("4.6")
 config/icon="res://assets/icons/launcher/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://kidkq1q75875"
+
 [autoload]
 
-Signals="*res://global_scripts/signals.gd"
-Settings="*res://global_scripts/settings.gd"
+Signals="*res://scripts/global/signals.gd"
+Settings="*res://scripts/global/settings.gd"
 
 [debug]
 
