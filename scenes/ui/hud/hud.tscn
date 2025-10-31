@@ -125,7 +125,7 @@ theme_override_font_sizes/font_size = 100
 text = "Time:"
 
 [node name="game_over_timer" type="Timer" parent="." unique_id=945030734]
-wait_time = 60.0
+wait_time = 80.0
 one_shot = true
 autostart = true
 script = ExtResource("6_todbw")
