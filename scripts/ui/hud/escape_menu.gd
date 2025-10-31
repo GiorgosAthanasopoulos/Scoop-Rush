@@ -20,7 +20,8 @@ func _on_main_menu_button_pressed() -> void:
 	var error: Error = get_tree().change_scene_to_file(main_menu_scene_res_path)
 	Music.play_menu_music()
 	if error != OK:
-		push_error(error_string(error))
+		push_error("Failed to go to main menu: " + error_string(error))
 
 func _on_quit_button_pressed() -> void:
+	await get_tree().create_timer(.1).timeout
 	get_tree().quit()

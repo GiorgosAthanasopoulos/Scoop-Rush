@@ -19,7 +19,7 @@ config/description="MashUp Game Jam '25 Entry."
 config/version="0.0.1"
 run/main_scene="uid://d0p7wpp615xah"
 config/features=PackedStringArray("4.6")
-config/icon="res://assets/icons/launcher/icon.svg"
+config/icon="res://assets/icons/launcher/v1/icon.svg"
 
 [audio]
 
@@ -31,6 +31,8 @@ Signals="*res://scripts/global/signals.gd"
 Settings="*res://scripts/global/settings.gd"
 Music="*res://scripts/global/music.gd"
 State="*res://scripts/global/state.gd"
+Sound="*res://scripts/global/sound.gd"
+Audio="*res://scripts/global/audio.gd"
 
 [debug]
 

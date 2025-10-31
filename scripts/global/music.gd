@@ -22,3 +22,9 @@ func play_game_music() -> void:
 
 func stop() -> void:
 	player.stop()
+
+func pause() -> void:
+	player.stream_paused = true
+
+func unpause() -> void:
+	player.stream_paused = false

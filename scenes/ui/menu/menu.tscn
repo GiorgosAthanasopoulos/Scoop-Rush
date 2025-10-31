@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0p7wpp615xah"]
+[gd_scene load_steps=4 format=3 uid="uid://d0p7wpp615xah"]
 
 [ext_resource type="Script" uid="uid://4q00ocey58pf" path="res://scripts/ui/menu/menu.gd" id="1_dmg3t"]
 [ext_resource type="Texture2D" uid="uid://gfqcip0nkrmo" path="res://assets/sprites/level/BG.png" id="2_1nj1p"]
+[ext_resource type="Script" uid="uid://dair3ncysjjbn" path="res://scripts/utils/button.gd" id="3_ldhvw"]
 
 [node name="menu" type="Control" unique_id=1488791957]
 layout_mode = 3
@@ -43,18 +44,21 @@ layout_mode = 2
 size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 100
 text = "Play"
+script = ExtResource("3_ldhvw")
 
 [node name="settings_button" type="Button" parent="v_box_container" unique_id=2140236811]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 100
 text = "Settings"
+script = ExtResource("3_ldhvw")
 
 [node name="quit_button" type="Button" parent="v_box_container" unique_id=1138611068]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 100
 text = "Quit"
+script = ExtResource("3_ldhvw")
 
 [connection signal="pressed" from="v_box_container/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="v_box_container/settings_button" to="." method="_on_settings_button_pressed"]

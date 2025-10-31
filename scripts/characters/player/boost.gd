@@ -1,16 +1,19 @@
 extends Node
 
 @export var boost_force : float = 2_000
-@export var boostInputAction: String = &'boost'
+@export var boost_input_action: String = &'boost'
 
 @onready var player: RigidBody2D = $'..'
 @onready var sprite_2d: Sprite2D = $'../sprite_2d'
+@onready var boost_audio: AudioStreamPlayer = $'../boost_audio'
 
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed(boostInputAction):
-		_boost(true)
-	if Input.is_action_pressed(boostInputAction):
+	if Input.is_action_just_pressed(boost_input_action):
 		_boost()
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed(boost_input_action):
+		boost_audio.play()
 
 func _boost(single_frame: bool = false) -> void:
 	var has_boost: bool = true

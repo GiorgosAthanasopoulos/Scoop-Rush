@@ -15,30 +15,26 @@ extends Control
 
 func _ready() -> void:
 	master_volume_slider.value = Settings.master_volume
-	_set_bus_volume_percent(master_bus_name, Settings.master_volume)
-
 	music_volume_slider.value = Settings.music_volume
-	_set_bus_volume_percent(music_bus_name, Settings.music_volume)
-
 	sfx_volume_slider.value = Settings.sfx_volume
-	_set_bus_volume_percent(sfx_bus_name, Settings.sfx_volume)
 
 func _on_sfx_volume_slider_value_changed(value: float) -> void:
-	_set_bus_volume_percent(sfx_bus_name, Settings.sfx_volume)
+	Audio.set_sfx_volume(int(value))
 	Settings.sfx_volume = int(value)
 	Settings.save_settings()
 
 func _on_music_volume_slider_value_changed(value: float) -> void:
-	_set_bus_volume_percent(music_bus_name, Settings.music_volume)
+	Audio.set_music_volume(int(value))
 	Settings.music_volume = int(value)
 	Settings.save_settings()
 
 func _on_master_volume_slider_value_changed(value: float) -> void:
-	_set_bus_volume_percent(master_bus_name, Settings.master_volume)
+	Audio.set_master_volume(int(value))
 	Settings.master_volume = int(value)
 	Settings.save_settings()
 
 func _on_back_button_pressed() -> void:
+	await get_tree().create_timer(.1).timeout
 	_back()
 
 func _back() -> void:
@@ -49,11 +45,8 @@ func _back() -> void:
 
 	var error: Error = get_tree().change_scene_to_file(main_menu_scene_res_path)
 	if error != OK:
-		push_error(error_string(error))
+		push_error("Failed to go to main menu: " + error_string(error))
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_released(back_input_action):
 		_back()
-
-func _set_bus_volume_percent(bus_name: String, volume: float) -> void:
-	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index(bus_name), volume / 100)

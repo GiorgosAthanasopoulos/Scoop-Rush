@@ -1,9 +1,9 @@
 extends Node
 
 var has_seen_controls_popup: bool = false
-var master_volume: int = 100
+var master_volume: int = 75
 var music_volume: int = 50
-var sfx_volume: int = 100
+var sfx_volume: int = 75
 
 const SETTINGS_FILE_PATH: String = "user://settings.cfg"
 

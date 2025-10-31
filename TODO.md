@@ -4,7 +4,6 @@
 - Overheat (after too much boost? + make self modulate of car sprite more read)
 - Hooks (to grapple with)
 
-- player starts with some amount of cargo
 - player should not pitch forward while boosting
 - instead of reloading when finishing the level should we show a win screen?
 

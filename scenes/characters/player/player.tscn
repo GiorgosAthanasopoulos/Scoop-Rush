@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://fcyjhs1b2xoo"]
+[gd_scene load_steps=12 format=3 uid="uid://fcyjhs1b2xoo"]
 
 [ext_resource type="PackedScene" uid="uid://bl80yilenf6hw" path="res://scenes/characters/player/wheel.tscn" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://ccalx84h4enuv" path="res://assets/sprites/car/v2/Car (new).png" id="2_5dc8e"]
@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://syvbalmbfi6a" path="res://scripts/characters/player/turn.gd" id="5_ixbpm"]
 [ext_resource type="Script" uid="uid://mbc7cf37x4ap" path="res://scripts/characters/player/boost.gd" id="6_6avc5"]
 [ext_resource type="Script" uid="uid://b06x53r2ab51s" path="res://scripts/characters/player/jumping.gd" id="6_c6leb"]
+[ext_resource type="AudioStream" uid="uid://dmir5jmknuodm" path="res://assets/audio/sfx/player/CarBoost.wav" id="7_djydg"]
+[ext_resource type="AudioStream" uid="uid://by6q15i0rbn33" path="res://assets/audio/sfx/player/CarJump.wav" id="7_mk55u"]
+[ext_resource type="AudioStream" uid="uid://cnlbqk1xc10il" path="res://assets/audio/sfx/player/CarMotor.wav" id="8_xuses"]
+[ext_resource type="AudioStream" uid="uid://cbtbpm51cyati" path="res://assets/audio/sfx/player/Overheating.wav" id="11_blysn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5dc8e"]
 
@@ -51,3 +55,21 @@ script = ExtResource("5_ixbpm")
 
 [node name="boost" type="Node2D" parent="." unique_id=646095917]
 script = ExtResource("6_6avc5")
+
+[node name="boost_audio" type="AudioStreamPlayer" parent="." unique_id=1500064208]
+stream = ExtResource("7_djydg")
+bus = &"SFX"
+
+[node name="jump_audio" type="AudioStreamPlayer" parent="." unique_id=2038297553]
+stream = ExtResource("7_mk55u")
+bus = &"SFX"
+
+[node name="motor_audio" type="AudioStreamPlayer" parent="." unique_id=1417006718]
+stream = ExtResource("8_xuses")
+volume_db = -15.0
+autoplay = true
+bus = &"SFX"
+
+[node name="overheating_audio" type="AudioStreamPlayer" parent="." unique_id=2011393179]
+stream = ExtResource("11_blysn")
+bus = &"SFX"

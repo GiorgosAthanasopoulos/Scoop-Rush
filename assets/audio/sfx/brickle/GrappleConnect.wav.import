@@ -13,11 +13,11 @@ dest_files=["res://.godot/imported/GrappleConnect.wav-d1c8144880d055942cd57a77dc
 [params]
 
 force/8_bit=false
-force/mono=false
-force/max_rate=false
+force/mono=true
+force/max_rate=true
 force/max_rate_hz=44100
-edit/trim=false
-edit/normalize=false
+edit/trim=true
+edit/normalize=true
 edit/loop_mode=0
 edit/loop_begin=0
 edit/loop_end=-1

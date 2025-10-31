@@ -4,6 +4,7 @@ extends Control
 @export var level_1_res_path: String = &'res://scenes/levels/level1/level1.tscn'
 
 func _on_quit_button_pressed() -> void:
+	await get_tree().create_timer(.1).timeout
 	get_tree().quit()
 
 func _on_settings_button_pressed() -> void:

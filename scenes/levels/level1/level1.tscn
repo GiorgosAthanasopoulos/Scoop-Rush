@@ -1,6 +1,7 @@
-[gd_scene load_steps=71 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=72 format=4 uid="uid://dkkfq2k3276ns"]
 
 [ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://scenes/ui/hud/hud.tscn" id="1_lv1b3"]
+[ext_resource type="Script" uid="uid://c8trpenpekk7y" path="res://scripts/levels/level1/level_1.gd" id="1_or0go"]
 [ext_resource type="PackedScene" uid="uid://i08itc3ggh8n" path="res://scenes/interactables/ring_of_fire/ring_of_fire.tscn" id="2_or0go"]
 [ext_resource type="Script" uid="uid://dhdc4b8yddyej" path="res://addons/rmsmartshape/shapes/shape.gd" id="3_ei1ye"]
 [ext_resource type="Script" uid="uid://bwcf4pjgprn0k" path="res://addons/rmsmartshape/shapes/point.gd" id="4_m6d3i"]
@@ -360,6 +361,7 @@ size = Vector2(150, 1538.75)
 size = Vector2(150, 2123)
 
 [node name="level_1" type="Node2D" unique_id=634582132]
+script = ExtResource("1_or0go")
 
 [node name="hud" parent="." unique_id=1399470084 instance=ExtResource("1_lv1b3")]
 metadata/_edit_use_anchors_ = true
