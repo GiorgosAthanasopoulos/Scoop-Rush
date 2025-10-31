@@ -1,10 +1,16 @@
 extends Node
 
 signal cargo_collected
+
 signal ring_of_fire_passed
+
 signal finished_level(cargo: int)
+
 signal boost_picked_up(charges: int)
 signal boost_used
+
+signal overheat_add
+signal overheat_remove
 
 func emit_cargo_collected() -> void:
 	cargo_collected.emit()

@@ -7,6 +7,7 @@ Overheat:
 	- add overheat
 - Boost:
 	- add overheat
+	- remove downward force
 - when losing (after time ends) -> play lose sound -> show finished level ui
 - when finishing if we have 0 cargo -> play lose sound
 - Build level

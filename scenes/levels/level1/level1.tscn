@@ -463,3 +463,7 @@ shape = SubResource("RectangleShape2D_lv1b3")
 
 [node name="boost" parent="boosts" unique_id=452327815 instance=ExtResource("22_m6d3i")]
 position = Vector2(-4301, 814)
+
+[node name="timer" type="Timer" parent="." unique_id=1837390003]
+wait_time = 60.0
+autostart = true
