@@ -1,8 +1,6 @@
-- Hooks (to grapple with)
 Overheat:
 	- self modulate of car sprite to red linearly as overheat increases
 	- slowly remove overheat as time passes without boost
-- Hot wheels-like loops
 - Rings of fire:
 	- add overheat
 - Boost:
@@ -13,13 +11,4 @@ Overheat:
 - Build level
 
 == WAITING ON ARTIST (FOTIS) ==
-- Rings of fire anim
-- Boost (Pickup + ui icon)
-- Hot wheels-like loops
-- Finish flag anim
-- Cargo (ui icon)
 - Env props
-- Main Menu (bg + icons)
-- Settings (icons)
-- Game icon
-- Star icon for finished level score scene

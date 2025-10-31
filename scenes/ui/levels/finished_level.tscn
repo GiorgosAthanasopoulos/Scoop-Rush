@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6yx0r1woa57f"]
+[gd_scene load_steps=7 format=3 uid="uid://b6yx0r1woa57f"]
 
-[ext_resource type="Texture2D" uid="uid://chqjm3psexe7r" path="res://assets/icons/launcher/v1/icon.svg" id="1_0peav"]
 [ext_resource type="Script" uid="uid://bjrakpk71s8wt" path="res://scripts/ui/levels/finished_level.gd" id="1_rahdb"]
+[ext_resource type="Texture2D" uid="uid://bsqj5k7h3tcld" path="res://assets/sprites/level/star.png" id="2_hllw7"]
+[ext_resource type="Texture2D" uid="uid://bbdjcm8tccqru" path="res://assets/sprites/ui/Play button.png" id="3_fsxij"]
 [ext_resource type="Script" uid="uid://dair3ncysjjbn" path="res://scripts/utils/button.gd" id="3_hllw7"]
+[ext_resource type="Texture2D" uid="uid://bgprc8fplkomb" path="res://assets/sprites/ui/Quit.png" id="5_408ue"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhq0t"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -45,7 +47,7 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jhq0t")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_jhq0t")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_jhq0t")
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhq0t")
-icon = ExtResource("1_0peav")
+icon = ExtResource("2_hllw7")
 icon_alignment = 1
 
 [node name="score_2" type="Button" parent="canvas_layer/v_box_container/h_box_container" unique_id=1614503786]
@@ -62,7 +64,7 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jhq0t")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_jhq0t")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_jhq0t")
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhq0t")
-icon = ExtResource("1_0peav")
+icon = ExtResource("2_hllw7")
 icon_alignment = 1
 
 [node name="score_3" type="Button" parent="canvas_layer/v_box_container/h_box_container" unique_id=2004649179]
@@ -79,14 +81,14 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jhq0t")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_jhq0t")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_jhq0t")
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhq0t")
-icon = ExtResource("1_0peav")
+icon = ExtResource("2_hllw7")
 icon_alignment = 1
 
 [node name="replay_button" type="Button" parent="canvas_layer/v_box_container" unique_id=1163421312]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 100
-text = "Replay Level"
+icon = ExtResource("3_fsxij")
 script = ExtResource("3_hllw7")
 
 [node name="main_menu_button" type="Button" parent="canvas_layer/v_box_container" unique_id=1239750276]
@@ -100,7 +102,7 @@ script = ExtResource("3_hllw7")
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 100
-text = "Quit"
+icon = ExtResource("5_408ue")
 script = ExtResource("3_hllw7")
 
 [connection signal="pressed" from="canvas_layer/v_box_container/replay_button" to="." method="_on_replay_button_pressed"]

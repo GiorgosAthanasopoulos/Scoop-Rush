@@ -13,6 +13,10 @@ extends Control
 @onready var music_volume_slider: HSlider = $v_box_container/h_box_container_2/music_volume_slider
 @onready var sfx_volume_slider: HSlider = $v_box_container/h_box_container_3/sfx_volume_slider
 
+@onready var master_mute_button: Button = $v_box_container/h_box_container/master_mute_button
+@onready var music_mute_button: Button = $v_box_container/h_box_container_2/music_mute_button
+@onready var sfx_mute_button: Button = $v_box_container/h_box_container_3/sfx_mute_button
+
 func _ready() -> void:
 	master_volume_slider.value = Settings.master_volume
 	music_volume_slider.value = Settings.music_volume
@@ -50,3 +54,12 @@ func _back() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_released(back_input_action):
 		_back()
+
+func _on_sfx_mute_button_pressed() -> void:
+	sfx_mute_button.text = "(Muted)" if Audio.toggle_sfx_mute() else ""
+
+func _on_music_mute_button_pressed() -> void:
+	music_mute_button.text = "(Muted)" if Audio.toggle_music_mute() else ""
+
+func _on_master_mute_button_pressed() -> void:
+	master_mute_button.text = "(Muted)" if Audio.toggle_master_mute() else ""

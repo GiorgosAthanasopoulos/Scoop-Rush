@@ -24,6 +24,9 @@ func _ready() -> void:
 		push_error("Failed to connect on boost picked up in boost: " + error_string(error))
 
 func _physics_process(_delta: float) -> void:
+	if State.paused:
+		return
+
 	if Input.is_action_just_pressed(boost_input_action):
 		_boost()
 

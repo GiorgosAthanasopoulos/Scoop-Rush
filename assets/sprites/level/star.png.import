@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvpu3a4xbxhe1"
-path="res://.godot/imported/Crazy sign (new).png-0c5e76661eee9fd2f044d250509a75b7.ctex"
+uid="uid://bsqj5k7h3tcld"
+path="res://.godot/imported/star.png-6874bee5639ddb9ca322409190f2b008.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/level/Crazy sign (new).png"
-dest_files=["res://.godot/imported/Crazy sign (new).png-0c5e76661eee9fd2f044d250509a75b7.ctex"]
+source_file="res://assets/sprites/level/star.png"
+dest_files=["res://.godot/imported/star.png-6874bee5639ddb9ca322409190f2b008.ctex"]
 
 [params]
 

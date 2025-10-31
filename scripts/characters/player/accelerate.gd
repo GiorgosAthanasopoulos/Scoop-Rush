@@ -9,12 +9,18 @@ extends RigidBody2D
 @onready var motor_audio: AudioStreamPlayer = $'../../motor_audio'
 
 func _physics_process(delta: float) -> void:
+	if State.paused:
+		return
+
 	if Input.is_action_pressed(move_right_input_action):
 		_accelerate(torque, delta)
 	if Input.is_action_pressed(move_left_input_action):
 		_accelerate(-torque, delta)
 
 func _process(_delta: float) -> void:
+	if State.paused:
+		return
+
 	var accelerating: bool = Input.is_action_pressed(move_right_input_action) or Input.is_action_pressed(move_left_input_action)
 	motor_audio.pitch_scale = acceleration_motor_pitch if accelerating else 1.0
 

@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://d4fmleankm8df" path="res://scenes/interactables/cargo/cargo.tscn" id="15_h4c5x"]
 [ext_resource type="PackedScene" uid="uid://brli5xhtjs6j" path="res://scenes/interactables/brickle/brickle.tscn" id="16_byo5e"]
 [ext_resource type="PackedScene" uid="uid://cj7fpj1ukt7wq" path="res://scenes/interactables/finish/finish.tscn" id="17_lh23y"]
-[ext_resource type="Texture2D" uid="uid://bvpu3a4xbxhe1" path="res://assets/sprites/level/Crazy sign (new).png" id="18_f0r81"]
+[ext_resource type="Texture2D" uid="uid://bvpu3a4xbxhe1" path="res://assets/sprites/level/env/Crazy sign (new).png" id="18_f0r81"]
 [ext_resource type="PackedScene" uid="uid://dyg4oi63dfm2" path="res://scenes/interactables/boost/boost.tscn" id="22_m6d3i"]
 
 [sub_resource type="Resource" id="Resource_ddtso"]
@@ -463,7 +463,3 @@ shape = SubResource("RectangleShape2D_lv1b3")
 
 [node name="boost" parent="boosts" unique_id=452327815 instance=ExtResource("22_m6d3i")]
 position = Vector2(-4301, 814)
-
-[node name="timer" type="Timer" parent="." unique_id=1837390003]
-wait_time = 60.0
-autostart = true

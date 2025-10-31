@@ -20,3 +20,18 @@ func set_sfx_volume(volume_linear: int) -> void:
 
 func _set_volume(bus_name: String, volume_linear: int) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index(bus_name), float(volume_linear) / 100)
+
+func toggle_master_mute() -> bool:
+	return _mute(master_bus_name)
+
+func toggle_music_mute() -> bool:
+	return _mute(music_bus_name)
+
+func toggle_sfx_mute() -> bool:
+	return _mute(sfx_bus_name)
+
+func _mute(bus_name: String) -> bool:
+	var bus_idx: int = AudioServer.get_bus_index(bus_name)
+	var muted: bool = !AudioServer.is_bus_mute(bus_idx)
+	AudioServer.set_bus_mute(bus_idx, muted)
+	return muted

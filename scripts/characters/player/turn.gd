@@ -31,6 +31,9 @@ func _handle_flipping(delta: float) -> void:
 		get_tree().call_deferred("reload_current_scene")
 
 func _physics_process(delta: float) -> void:
+	if State.paused:
+		return
+
 	if Input.is_action_pressed(&'turn_left'):
 		_turn(-air_torque, delta)
 

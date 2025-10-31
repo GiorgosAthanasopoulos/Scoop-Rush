@@ -19,7 +19,10 @@ config/description="MashUp Game Jam '25 Entry."
 config/version="0.0.1"
 run/main_scene="uid://d0p7wpp615xah"
 config/features=PackedStringArray("4.6")
-config/icon="res://assets/icons/launcher/v1/icon.svg"
+boot_splash/bg_color=Color(0.17254902, 0.33333334, 0.72156864, 1)
+boot_splash/image="uid://cb7tswydm275i"
+config/icon="uid://cb7tswydm275i"
+boot_splash/minimum_display_time=1000
 
 [audio]
 
