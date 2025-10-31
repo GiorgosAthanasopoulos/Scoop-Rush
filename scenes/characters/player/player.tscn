@@ -66,7 +66,7 @@ bus = &"SFX"
 
 [node name="motor_audio" type="AudioStreamPlayer" parent="." unique_id=1417006718]
 stream = ExtResource("8_xuses")
-volume_db = -15.0
+volume_db = -21.0
 autoplay = true
 bus = &"SFX"
 

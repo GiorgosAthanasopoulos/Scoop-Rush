@@ -5,3 +5,4 @@ extends Node2D
 func _ready() -> void:
 	for i: int in range(initial_cargo_count):
 		Signals.emit_cargo_collected()
+	State.over = false

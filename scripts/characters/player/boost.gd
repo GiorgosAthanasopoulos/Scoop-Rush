@@ -3,7 +3,9 @@ extends Node
 @export var boost_force : float = 5_000
 @export var boost_input_action: String = &'boost'
 @export var boost_delay: float = 2
+
 @export var max_overheat: int = 2
+@export var overheat_refresh: int = 5
 
 @onready var player: RigidBody2D = $'..'
 @onready var sprite_2d: Sprite2D = $'../sprite_2d'
@@ -20,7 +22,7 @@ func _ready() -> void:
 	add_child(_overheat_timer)
 
 	_timer.wait_time = boost_delay
-	_overheat_timer.wait_time = 10
+	_overheat_timer.wait_time = overheat_refresh
 
 	var error: Error = _timer.timeout.connect(_on_timer_timeout) as Error
 	if error != OK:
@@ -35,7 +37,7 @@ func _ready() -> void:
 		push_error("Failed to connect on overheat timer timeout in boost: " + error_string(error))
 
 func _physics_process(_delta: float) -> void:
-	if State.paused:
+	if State.paused or State.over:
 		return
 
 	if Input.is_action_just_pressed(boost_input_action):

@@ -29,7 +29,11 @@ func _on_body_entered(body: Node2D) -> void:
 		audio_stream_player.play()
 
 func _on_audio_stream_player_finished() -> void:
+	if State.over:
+		return
+
 	if _cargo == 0:
 		lose.play()
 		await get_tree().create_timer(.1).timeout
+	State.over = true
 	Signals.emit_finished_level(_cargo)

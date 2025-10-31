@@ -4,12 +4,16 @@ extends Timer
 @onready var lose: AudioStreamPlayer = $'../lose'
 
 func _process(_delta: float) -> void:
-	if State.paused:
+	if State.paused or State.over:
 		return
 
 	timer_label.text = "Time: " + str(int(time_left))
 
 func _on_timeout() -> void:
+	if State.over:
+		return
+
 	lose.play()
 	await get_tree().create_timer(.1).timeout
+	State.over = true
 	Signals.emit_finished_level(0)

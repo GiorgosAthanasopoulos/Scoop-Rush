@@ -19,7 +19,7 @@ func _ready() -> void:
 		push_error("Failed to connect timer timeout in jumping: " + error_string(error))
 
 func _input(event: InputEvent) -> void:
-	if State.paused:
+	if State.paused or State.over:
 		return
 
 	if event.is_action_pressed(jump_input_action):
