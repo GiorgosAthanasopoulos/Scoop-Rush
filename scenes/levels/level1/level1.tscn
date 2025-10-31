@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=71 format=4 uid="uid://dkkfq2k3276ns"]
 
 [ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://scenes/ui/hud/hud.tscn" id="1_lv1b3"]
 [ext_resource type="PackedScene" uid="uid://i08itc3ggh8n" path="res://scenes/interactables/ring_of_fire/ring_of_fire.tscn" id="2_or0go"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://brli5xhtjs6j" path="res://scenes/interactables/brickle/brickle.tscn" id="16_byo5e"]
 [ext_resource type="PackedScene" uid="uid://cj7fpj1ukt7wq" path="res://scenes/interactables/finish/finish.tscn" id="17_lh23y"]
 [ext_resource type="Texture2D" uid="uid://bvpu3a4xbxhe1" path="res://assets/sprites/level/Crazy sign (new).png" id="18_f0r81"]
-[ext_resource type="AudioStream" uid="uid://cir08vqqpra5r" path="res://assets/audio/music/v2/scoop city_demo.mp3" id="19_bby6e"]
 
 [sub_resource type="Resource" id="Resource_ddtso"]
 script = ExtResource("4_m6d3i")
@@ -424,12 +423,6 @@ position = Vector2(11808, -711)
 
 [node name="finish" parent="." unique_id=1983399488 instance=ExtResource("17_lh23y")]
 position = Vector2(19416, 1599)
-
-[node name="bg_music" type="AudioStreamPlayer" parent="." unique_id=1592117127]
-stream = ExtResource("19_bby6e")
-volume_db = -15.143
-autoplay = true
-bus = &"Music"
 
 [node name="obstacles" type="Node2D" parent="." unique_id=1283693588]
 

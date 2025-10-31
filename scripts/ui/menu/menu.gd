@@ -13,5 +13,6 @@ func _on_settings_button_pressed() -> void:
 
 func _on_play_button_pressed() -> void:
 	var error: Error = get_tree().change_scene_to_file(level_1_res_path)
+	Music.play_game_music()
 	if error != OK:
 		push_error("Failed to go to level 1: " + error_string(error))

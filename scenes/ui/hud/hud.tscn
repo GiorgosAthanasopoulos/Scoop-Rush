@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxa0t1yohjcop"]
+[gd_scene load_steps=5 format=3 uid="uid://cxa0t1yohjcop"]
 
 [ext_resource type="Texture2D" uid="uid://ci2r8xy00f4cv" path="res://assets/sprites/level/Clouds (new).png" id="1_e0nub"]
 [ext_resource type="Script" uid="uid://chhcb1ei1n642" path="res://scripts/ui/hud/cargo_counter.gd" id="1_rnu65"]
 [ext_resource type="Script" uid="uid://bbl4e828j5yet" path="res://scripts/ui/hud/controls_timer.gd" id="3_e0nub"]
+[ext_resource type="Script" uid="uid://doscf8pyp1p4" path="res://scripts/ui/hud/escape_menu.gd" id="4_ax4tw"]
 
 [node name="hud" type="Control" unique_id=1399470084]
 z_index = -100
@@ -57,4 +58,51 @@ one_shot = true
 autostart = true
 script = ExtResource("3_e0nub")
 
+[node name="escape_menu" type="CanvasLayer" parent="." unique_id=857631487]
+visible = false
+script = ExtResource("4_ax4tw")
+
+[node name="v_box_container" type="VBoxContainer" parent="escape_menu" unique_id=227234916]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="paused_label" type="Label" parent="escape_menu/v_box_container" unique_id=112139343]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resume_button" type="Button" parent="escape_menu/v_box_container" unique_id=309157481]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Resume"
+
+[node name="settings_button" type="Button" parent="escape_menu/v_box_container" unique_id=663815830]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Settings"
+
+[node name="main_menu_button" type="Button" parent="escape_menu/v_box_container" unique_id=597645931]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Return to main menu"
+
+[node name="quit_button" type="Button" parent="escape_menu/v_box_container" unique_id=1118646026]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+
 [connection signal="timeout" from="canvas_layer/v_box_container/label/timer" to="canvas_layer/v_box_container/label/timer" method="_on_timeout"]
+[connection signal="pressed" from="escape_menu/v_box_container/resume_button" to="escape_menu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="escape_menu/v_box_container/settings_button" to="escape_menu" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="escape_menu/v_box_container/main_menu_button" to="escape_menu" method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="escape_menu/v_box_container/quit_button" to="escape_menu" method="_on_quit_button_pressed"]

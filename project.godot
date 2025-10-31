@@ -29,6 +29,8 @@ buses/default_bus_layout="uid://kidkq1q75875"
 
 Signals="*res://scripts/global/signals.gd"
 Settings="*res://scripts/global/settings.gd"
+Music="*res://scripts/global/music.gd"
+State="*res://scripts/global/state.gd"
 
 [debug]
 

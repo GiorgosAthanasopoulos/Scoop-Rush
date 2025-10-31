@@ -4,8 +4,8 @@ extends Control
 @export var music_bus_name: String = &'Music'
 @export var sfx_bus_name: String = &'SFX'
 
-@export var main_menu_scene_res_path: String = &'res://scenes/ui/meun/menu.tscn'
-@export var settings_scene_res_path: String = &'res://scenes/ui/meun/menu.tscn'
+@export var main_menu_scene_res_path: String = &'res://scenes/ui/menu/menu.tscn'
+@export var settings_scene_res_path: String = &'res://scenes/ui/settings/settings.tscn'
 
 @export var back_input_action: String = &'ui_cancel'
 
@@ -39,15 +39,21 @@ func _on_master_volume_slider_value_changed(value: float) -> void:
 	Settings.save_settings()
 
 func _on_back_button_pressed() -> void:
+	_back()
+
+func _back() -> void:
+	if State.settings_from_game:
+		State.settings_from_game = false
+		queue_free()
+		return
+
 	var error: Error = get_tree().change_scene_to_file(main_menu_scene_res_path)
 	if error != OK:
 		push_error(error_string(error))
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_released(back_input_action):
-		var error: Error = get_tree().change_scene_to_file(settings_scene_res_path)
-		if error != OK:
-			push_error(error_string(error))
+		_back()
 
 func _set_bus_volume_percent(bus_name: String, volume: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index(bus_name), volume / 100)

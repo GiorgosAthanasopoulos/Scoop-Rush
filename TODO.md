@@ -1,10 +1,12 @@
-- Escape/Pause menu
 - Rings of fire (adds overheat)
 - Boost (Bar + Pickups + maybe fix impulse/force?)
 - Hot wheels-like loops
 - Overheat (after too much boost? + make self modulate of car sprite more read)
-- Debug build to team for testing + bug fixing
 - Hooks (to grapple with)
+
+- player starts with some amount of cargo
+- player should not pitch forward while boosting
+- instead of reloading when finishing the level should we show a win screen?
 
 == WAITING ON ARTIST (FOTIS) ==
 - Rings of fire anim

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj7fpj1ukt7wq"]
+[gd_scene load_steps=5 format=3 uid="uid://cj7fpj1ukt7wq"]
 
 [ext_resource type="Script" uid="uid://40j100gksg6b" path="res://scripts/interactables/finish/finish.gd" id="1_7u44c"]
 [ext_resource type="Texture2D" uid="uid://cqmfy0ui4ksrp" path="res://assets/sprites/finish_flag/v2/Finish flag (1).png" id="2_tapdo"]
+[ext_resource type="AudioStream" uid="uid://cgu5eor4piw70" path="res://assets/audio/sfx/levels/Finish.wav" id="3_3pohn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdwx7"]
 size = Vector2(557, 994)
@@ -18,4 +19,9 @@ texture = ExtResource("2_tapdo")
 region_enabled = true
 region_rect = Rect2(887, 784, 597, 1028)
 
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="." unique_id=1977146903]
+stream = ExtResource("3_3pohn")
+bus = &"SFX"
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="audio_stream_player" to="." method="_on_audio_stream_player_finished"]
