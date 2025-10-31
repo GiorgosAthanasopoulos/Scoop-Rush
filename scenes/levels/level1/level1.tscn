@@ -1692,13 +1692,16 @@ position = Vector2(25718, 1913)
 position = Vector2(38537, 1874)
 
 [node name="coin_6" parent="coins" unique_id=1080447231 instance=ExtResource("15_h4c5x")]
-position = Vector2(44075, 1095)
+position = Vector2(43860, 3264)
 
 [node name="coin_7" parent="coins" unique_id=746757296 instance=ExtResource("15_h4c5x")]
 position = Vector2(49356, 1629)
 
 [node name="coin_8" parent="coins" unique_id=1508650623 instance=ExtResource("15_h4c5x")]
 position = Vector2(72168, 878)
+
+[node name="coin_9" parent="coins" unique_id=1133598900 instance=ExtResource("15_h4c5x")]
+position = Vector2(58985, 1184)
 
 [node name="brickles" type="Node2D" parent="." unique_id=877937571]
 
@@ -1800,7 +1803,10 @@ position = Vector2(21644, 1915)
 position = Vector2(32899, 2898)
 
 [node name="boost_4" parent="boosts" unique_id=977267219 instance=ExtResource("22_m6d3i")]
-position = Vector2(43997, 3171)
+position = Vector2(43711, 1073)
+
+[node name="boost_5" parent="boosts" unique_id=1626515855 instance=ExtResource("22_m6d3i")]
+position = Vector2(62839, 1295)
 
 [node name="finish" parent="." unique_id=1983399488 instance=ExtResource("17_lh23y")]
 position = Vector2(77081, 580)
