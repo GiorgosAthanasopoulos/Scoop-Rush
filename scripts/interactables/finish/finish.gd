@@ -5,13 +5,20 @@ extends Area2D
 
 @onready var audio_stream_player: AudioStreamPlayer = $audio_stream_player
 
+var _cargo: int = 0
+
+func _ready() -> void:
+	var error: Error = Signals.cargo_collected.connect(_on_cargo_collected) as Error
+	if error != OK:
+		push_error("Failed to connect cargo_collected signal in finish flag: " + error_string(error))
+
+func _on_cargo_collected() -> void:
+	_cargo += 1
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group(player_group):
 		Music.stop()
 		audio_stream_player.play()
 
 func _on_audio_stream_player_finished() -> void:
-	Music.play_menu_music()
-	var error: Error = get_tree().change_scene_to_file(main_menu_scene_res_path)
-	if error != OK:
-		push_error("Failed to go to main menu scene: " + error_string(error))
+	Signals.emit_finished_level(_cargo)

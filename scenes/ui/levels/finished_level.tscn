@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6yx0r1woa57f"]
+
+[ext_resource type="Texture2D" uid="uid://chqjm3psexe7r" path="res://assets/icons/launcher/v1/icon.svg" id="1_0peav"]
+[ext_resource type="Script" uid="uid://bjrakpk71s8wt" path="res://scripts/ui/levels/finished_level.gd" id="1_rahdb"]
+[ext_resource type="Script" uid="uid://dair3ncysjjbn" path="res://scripts/utils/button.gd" id="3_hllw7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhq0t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="finished_level" type="Control" unique_id=1488451588]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rahdb")
+
+[node name="canvas_layer" type="CanvasLayer" parent="." unique_id=685946063]
+visible = false
+
+[node name="v_box_container" type="VBoxContainer" parent="canvas_layer" unique_id=118965254]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="h_box_container" type="HBoxContainer" parent="canvas_layer/v_box_container" unique_id=1185429006]
+layout_mode = 2
+alignment = 1
+
+[node name="score_1" type="Button" parent="canvas_layer/v_box_container/h_box_container" unique_id=1430337159]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhq0t")
+icon = ExtResource("1_0peav")
+icon_alignment = 1
+
+[node name="score_2" type="Button" parent="canvas_layer/v_box_container/h_box_container" unique_id=1614503786]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhq0t")
+icon = ExtResource("1_0peav")
+icon_alignment = 1
+
+[node name="score_3" type="Button" parent="canvas_layer/v_box_container/h_box_container" unique_id=2004649179]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_jhq0t")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhq0t")
+icon = ExtResource("1_0peav")
+icon_alignment = 1
+
+[node name="replay_button" type="Button" parent="canvas_layer/v_box_container" unique_id=1163421312]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Replay Level"
+script = ExtResource("3_hllw7")
+
+[node name="main_menu_button" type="Button" parent="canvas_layer/v_box_container" unique_id=1239750276]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Return to main menu"
+script = ExtResource("3_hllw7")
+
+[node name="quit_button" type="Button" parent="canvas_layer/v_box_container" unique_id=1415710251]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+script = ExtResource("3_hllw7")
+
+[connection signal="pressed" from="canvas_layer/v_box_container/replay_button" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="canvas_layer/v_box_container/main_menu_button" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="canvas_layer/v_box_container/quit_button" to="." method="_on_quit_button_pressed"]

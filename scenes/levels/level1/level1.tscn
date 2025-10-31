@@ -1,9 +1,11 @@
-[gd_scene load_steps=72 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=74 format=4 uid="uid://dkkfq2k3276ns"]
 
 [ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://scenes/ui/hud/hud.tscn" id="1_lv1b3"]
 [ext_resource type="Script" uid="uid://c8trpenpekk7y" path="res://scripts/levels/level1/level_1.gd" id="1_or0go"]
 [ext_resource type="PackedScene" uid="uid://i08itc3ggh8n" path="res://scenes/interactables/ring_of_fire/ring_of_fire.tscn" id="2_or0go"]
 [ext_resource type="Script" uid="uid://dhdc4b8yddyej" path="res://addons/rmsmartshape/shapes/shape.gd" id="3_ei1ye"]
+[ext_resource type="PackedScene" uid="uid://bflc775l745d4" path="res://scenes/ui/misc/escape_menu.tscn" id="3_or0go"]
+[ext_resource type="PackedScene" uid="uid://b6yx0r1woa57f" path="res://scenes/ui/levels/finished_level.tscn" id="4_ei1ye"]
 [ext_resource type="Script" uid="uid://bwcf4pjgprn0k" path="res://addons/rmsmartshape/shapes/point.gd" id="4_m6d3i"]
 [ext_resource type="Script" uid="uid://bo5f7qe27jfje" path="res://addons/rmsmartshape/shapes/point_array.gd" id="5_wgrlg"]
 [ext_resource type="Script" uid="uid://llobjh5hvry" path="res://addons/rmsmartshape/shapes/mesh.gd" id="6_ohl02"]
@@ -365,6 +367,10 @@ script = ExtResource("1_or0go")
 
 [node name="hud" parent="." unique_id=1399470084 instance=ExtResource("1_lv1b3")]
 metadata/_edit_use_anchors_ = true
+
+[node name="escape_menu" parent="." unique_id=1384349920 instance=ExtResource("3_or0go")]
+
+[node name="finished_level" parent="." unique_id=1488451588 instance=ExtResource("4_ei1ye")]
 
 [node name="ground" type="Node2D" parent="." unique_id=901300147]
 

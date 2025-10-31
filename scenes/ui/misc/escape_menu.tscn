@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://bflc775l745d4"]
+
+[ext_resource type="Script" uid="uid://doscf8pyp1p4" path="res://scripts/ui/hud/escape_menu.gd" id="1_6phne"]
+[ext_resource type="Script" uid="uid://dair3ncysjjbn" path="res://scripts/utils/button.gd" id="2_fuifu"]
+
+[node name="escape_menu" type="Control" unique_id=1943053554]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="canvas_layer" type="CanvasLayer" parent="." unique_id=1384349920]
+visible = false
+script = ExtResource("1_6phne")
+
+[node name="v_box_container" type="VBoxContainer" parent="canvas_layer" unique_id=1176718672]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="paused_label" type="Label" parent="canvas_layer/v_box_container" unique_id=1279743942]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resume_button" type="Button" parent="canvas_layer/v_box_container" unique_id=69642437]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Resume"
+script = ExtResource("2_fuifu")
+
+[node name="settings_button" type="Button" parent="canvas_layer/v_box_container" unique_id=2134195355]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Settings"
+script = ExtResource("2_fuifu")
+
+[node name="main_menu_button" type="Button" parent="canvas_layer/v_box_container" unique_id=948862536]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Return to main menu"
+script = ExtResource("2_fuifu")
+
+[node name="quit_button" type="Button" parent="canvas_layer/v_box_container" unique_id=1937995831]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+script = ExtResource("2_fuifu")
+
+[connection signal="pressed" from="canvas_layer/v_box_container/resume_button" to="canvas_layer" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="canvas_layer/v_box_container/settings_button" to="canvas_layer" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="canvas_layer/v_box_container/main_menu_button" to="canvas_layer" method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="canvas_layer/v_box_container/quit_button" to="canvas_layer" method="_on_quit_button_pressed"]

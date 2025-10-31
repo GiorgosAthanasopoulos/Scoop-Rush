@@ -22,7 +22,6 @@ func save_settings() -> void:
 	var error: Error = config.save(SETTINGS_FILE_PATH)
 	if error != OK:
 		push_error("Failed to save settings file: " + error_string(error))
-		return
 
 func load_settings() -> void:
 	var config: ConfigFile = ConfigFile.new()

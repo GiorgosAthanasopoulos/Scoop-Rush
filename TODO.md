@@ -1,11 +1,8 @@
 - Rings of fire (adds overheat)
-- Boost (Bar + Pickups + maybe fix impulse/force?)
+- Boost (Bar + Pickups)
 - Hot wheels-like loops
 - Overheat (after too much boost? + make self modulate of car sprite more read)
 - Hooks (to grapple with)
-
-- player should not pitch forward while boosting
-- instead of reloading when finishing the level should we show a win screen?
 
 == WAITING ON ARTIST (FOTIS) ==
 - Rings of fire anim
@@ -13,7 +10,8 @@
 - Hot wheels-like loops
 - Finish flag anim
 - Cargo (ui icon)
-- Env props
+- Env props (build level)
 - Main Menu (bg + icons)
 - Settings (icons)
 - Game icon
+- Star icon for finished level score scene
