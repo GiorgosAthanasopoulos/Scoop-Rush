@@ -1533,10 +1533,6 @@ position = Vector2(49356, 1629)
 [node name="coin_8" parent="coins" unique_id=1508650623 instance=ExtResource("15_h4c5x")]
 position = Vector2(55952, 878)
 
-[node name="phone" type="Sprite2D" parent="coins" unique_id=338693127]
-position = Vector2(59302, 582)
-texture = ExtResource("23_x0doa")
-
 [node name="brickles" type="Node2D" parent="." unique_id=877937571]
 
 [node name="brickle" parent="brickles" unique_id=1181252911 instance=ExtResource("16_byo5e")]
@@ -1603,6 +1599,10 @@ texture = ExtResource("22_ohl02")
 [node name="fire_hydrant_3" type="Sprite2D" parent="env_props" unique_id=3190350]
 position = Vector2(45239, 861)
 texture = ExtResource("22_ohl02")
+
+[node name="phone_3" type="Sprite2D" parent="env_props" unique_id=338693127]
+position = Vector2(59302, 582)
+texture = ExtResource("23_x0doa")
 
 [node name="world_boundaries" type="Node2D" parent="." unique_id=338985208]
 

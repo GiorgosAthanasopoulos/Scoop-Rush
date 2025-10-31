@@ -5,7 +5,7 @@ extends Node
 @export var boost_delay: float = 2
 
 @export var max_overheat: int = 2
-@export var overheat_refresh: int = 5
+@export var overheat_refresh: int = 15
 
 @onready var player: RigidBody2D = $'..'
 @onready var sprite_2d: Sprite2D = $'../sprite_2d'
