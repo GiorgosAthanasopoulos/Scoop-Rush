@@ -12,7 +12,6 @@ func _ready() -> void:
 	if error != OK:
 		push_error("Failed to connect on boost used up in hud: " + error_string(error))
 
-
 func _on_boost_picked_up(charges: int) -> void:
 	_charges = charges
 	_max_charges = charges
@@ -20,4 +19,4 @@ func _on_boost_picked_up(charges: int) -> void:
 
 func _on_boost_used() -> void:
 	_charges -= 1
-	value = float(_charges) / float(_max_charges) * 100.0
+	value = _charges

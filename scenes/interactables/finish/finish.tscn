@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj7fpj1ukt7wq"]
+[gd_scene load_steps=6 format=3 uid="uid://cj7fpj1ukt7wq"]
 
 [ext_resource type="Script" uid="uid://40j100gksg6b" path="res://scripts/interactables/finish/finish.gd" id="1_7u44c"]
+[ext_resource type="AudioStream" uid="uid://c0lvo1827skrd" path="res://assets/audio/sfx/levels/Lose.wav" id="2_7ke1u"]
 [ext_resource type="Texture2D" uid="uid://cqmfy0ui4ksrp" path="res://assets/sprites/finish_flag/v2/Finish flag (1).png" id="2_tapdo"]
 [ext_resource type="AudioStream" uid="uid://cgu5eor4piw70" path="res://assets/audio/sfx/levels/Finish.wav" id="3_3pohn"]
 
@@ -9,6 +10,10 @@ size = Vector2(557, 994)
 
 [node name="finish" type="Area2D" unique_id=1983399488]
 script = ExtResource("1_7u44c")
+
+[node name="lose" type="AudioStreamPlayer" parent="." unique_id=1759517401]
+stream = ExtResource("2_7ke1u")
+bus = &"SFX"
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=74525863]
 position = Vector2(16.5, 6)

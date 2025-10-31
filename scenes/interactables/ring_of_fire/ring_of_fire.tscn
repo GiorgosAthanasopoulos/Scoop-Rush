@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://i08itc3ggh8n"]
+[gd_scene load_steps=6 format=3 uid="uid://i08itc3ggh8n"]
 
 [ext_resource type="Texture2D" uid="uid://ca3qijlij1gg7" path="res://assets/sprites/ring_of_fire/v1/Ring of fire(new).png" id="1_tcmhq"]
+[ext_resource type="Script" uid="uid://b1tpx2oxjwo6g" path="res://scripts/interactables/ring_of_fire/ring_of_fire.gd" id="1_vix0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcmhq"]
 size = Vector2(32, 744)
@@ -13,6 +14,8 @@ size = Vector2(190, 780)
 
 [node name="ring_of_fire" type="StaticBody2D" unique_id=381231388]
 z_index = -100
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_vix0r")
 
 [node name="sprite_2d" type="Sprite2D" parent="." unique_id=516634955]
 texture = ExtResource("1_tcmhq")
@@ -30,3 +33,5 @@ shape = SubResource("RectangleShape2D_jv6po")
 [node name="collision_shape_2d" type="CollisionShape2D" parent="area_2d" unique_id=1158199355]
 position = Vector2(7, -292)
 shape = SubResource("RectangleShape2D_q7xrw")
+
+[connection signal="body_entered" from="area_2d" to="." method="_on_area_2d_body_entered"]

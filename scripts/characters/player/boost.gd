@@ -3,6 +3,7 @@ extends Node
 @export var boost_force : float = 5_000
 @export var boost_input_action: String = &'boost'
 @export var boost_delay: float = 2
+@export var max_overheat: int = 2
 
 @onready var player: RigidBody2D = $'..'
 @onready var sprite_2d: Sprite2D = $'../sprite_2d'
@@ -11,17 +12,27 @@ extends Node
 var _can_boost: bool = true
 var _boost_charges: int = 0
 var _timer: Timer = Timer.new()
+var _overheat_timer: Timer = Timer.new()
+var _overheat: int = 0
 
 func _ready() -> void:
 	add_child(_timer)
+	add_child(_overheat_timer)
+
 	_timer.wait_time = boost_delay
+	_overheat_timer.wait_time = 10
+
 	var error: Error = _timer.timeout.connect(_on_timer_timeout) as Error
 	if error != OK:
-		push_error("Failed to connect timer timeout in jumping: " + error_string(error))
+		push_error("Failed to connect timer timeout in boost: " + error_string(error))
 
 	error = Signals.boost_picked_up.connect(_on_boost_picked_up) as Error
 	if error != OK:
 		push_error("Failed to connect on boost picked up in boost: " + error_string(error))
+
+	error = _overheat_timer.timeout.connect(_on_overheat_timer_timeout) as Error
+	if error != OK:
+		push_error("Failed to connect on overheat timer timeout in boost: " + error_string(error))
 
 func _physics_process(_delta: float) -> void:
 	if State.paused:
@@ -44,9 +55,24 @@ func _boost() -> void:
 	_timer.start()
 	_boost_charges -= 1
 	Signals.emit_boost_used()
+	if not _overheat_timer.is_stopped():
+		_overheat += 1 if _overheat < max_overheat else 0
+		if _overheat == max_overheat:
+			_overheat = 0
+			for i: int in range(max_overheat):
+				Signals.emit_overheat_remove()
+			Signals.emit_remove_cargo()
+		Signals.emit_overheat_add()
+	else:
+		_overheat_timer.start()
 
 func _on_timer_timeout() -> void:
 	_can_boost = true
 
 func _on_boost_picked_up(charges: int) -> void:
 	_boost_charges = charges
+
+func _on_overheat_timer_timeout() -> void:
+	_overheat = 0
+	for i: int in range(max_overheat):
+		Signals.emit_overheat_remove()

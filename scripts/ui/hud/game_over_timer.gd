@@ -4,6 +4,9 @@ extends Timer
 @onready var lose: AudioStreamPlayer = $'../lose'
 
 func _process(_delta: float) -> void:
+	if State.paused:
+		return
+
 	timer_label.text = "Time: " + str(int(time_left))
 
 func _on_timeout() -> void:

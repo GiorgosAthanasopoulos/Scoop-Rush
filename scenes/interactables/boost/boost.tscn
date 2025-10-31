@@ -1,19 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyg4oi63dfm2"]
+[gd_scene load_steps=4 format=3 uid="uid://dyg4oi63dfm2"]
 
 [ext_resource type="Script" uid="uid://boo4eyqh4plxf" path="res://scripts/interactables/boost/boost.gd" id="1_lak47"]
+[ext_resource type="Texture2D" uid="uid://cj4n2a1jq06yu" path="res://assets/sprites/boost/Boost pick up.png" id="2_304ml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4blyq"]
-size = Vector2(500, 250)
+size = Vector2(132, 207.5)
 
 [node name="boost" type="Area2D" unique_id=174221569 groups=["brickle"]]
+scale = Vector2(2, 2)
 script = ExtResource("1_lak47")
 
 [node name="sprite_2d" type="Sprite2D" parent="." unique_id=993940160]
+texture = ExtResource("2_304ml")
 region_enabled = true
-region_rect = Rect2(441, 567, 1071, 485)
+region_rect = Rect2(37, 2, 117, 191)
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=1928381513]
-position = Vector2(-6, -11.5)
+position = Vector2(2, 9.75)
 shape = SubResource("RectangleShape2D_4blyq")
 
 [node name="audio_stream_player" type="AudioStreamPlayer" parent="." unique_id=1471688589]
