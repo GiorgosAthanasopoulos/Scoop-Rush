@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://i08itc3ggh8n"]
 
-[ext_resource type="Texture2D" uid="uid://ca3qijlij1gg7" path="res://assets/sprites/ring_of_fire/Ring of fire(new).png" id="1_tcmhq"]
+[ext_resource type="Texture2D" uid="uid://ca3qijlij1gg7" path="res://assets/sprites/ring_of_fire/v1/Ring of fire(new).png" id="1_tcmhq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcmhq"]
 size = Vector2(32, 744)
