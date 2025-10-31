@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=4 uid="uid://dkkfq2k3276ns"]
+[gd_scene load_steps=75 format=4 uid="uid://dkkfq2k3276ns"]
 
 [ext_resource type="PackedScene" uid="uid://cxa0t1yohjcop" path="res://scenes/ui/hud/hud.tscn" id="1_lv1b3"]
 [ext_resource type="Script" uid="uid://c8trpenpekk7y" path="res://scripts/levels/level1/level_1.gd" id="1_or0go"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://brli5xhtjs6j" path="res://scenes/interactables/brickle/brickle.tscn" id="16_byo5e"]
 [ext_resource type="PackedScene" uid="uid://cj7fpj1ukt7wq" path="res://scenes/interactables/finish/finish.tscn" id="17_lh23y"]
 [ext_resource type="Texture2D" uid="uid://bvpu3a4xbxhe1" path="res://assets/sprites/level/Crazy sign (new).png" id="18_f0r81"]
+[ext_resource type="PackedScene" uid="uid://dyg4oi63dfm2" path="res://scenes/interactables/boost/boost.tscn" id="22_m6d3i"]
 
 [sub_resource type="Resource" id="Resource_ddtso"]
 script = ExtResource("4_m6d3i")
@@ -457,3 +458,8 @@ position = Vector2(19988, 1976)
 [node name="collision_shape_2d" type="CollisionShape2D" parent="world_boundaries/wall_2" unique_id=930861893]
 position = Vector2(-38, -885.5)
 shape = SubResource("RectangleShape2D_lv1b3")
+
+[node name="boosts" type="Node2D" parent="." unique_id=763650999]
+
+[node name="boost" parent="boosts" unique_id=452327815 instance=ExtResource("22_m6d3i")]
+position = Vector2(-4301, 814)

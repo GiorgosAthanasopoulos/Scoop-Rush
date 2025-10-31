@@ -3,14 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://wvs33bqg0qd" path="res://assets/sprites/brickle/Hook point(new).png" id="2_4blyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4blyq"]
-size = Vector2(128, 128)
+size = Vector2(1050, 453)
 
 [node name="brickle" type="Area2D" unique_id=174221569 groups=["brickle"]]
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=1928381513]
-shape = SubResource("RectangleShape2D_4blyq")
 
 [node name="sprite_2d" type="Sprite2D" parent="." unique_id=993940160]
 texture = ExtResource("2_4blyq")
 region_enabled = true
 region_rect = Rect2(441, 567, 1071, 485)
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="." unique_id=1928381513]
+position = Vector2(-6, -11.5)
+shape = SubResource("RectangleShape2D_4blyq")

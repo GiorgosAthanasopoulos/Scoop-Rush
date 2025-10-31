@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxa0t1yohjcop"]
+[gd_scene load_steps=6 format=3 uid="uid://cxa0t1yohjcop"]
 
 [ext_resource type="Texture2D" uid="uid://ci2r8xy00f4cv" path="res://assets/sprites/level/Clouds (new).png" id="1_e0nub"]
 [ext_resource type="Script" uid="uid://chhcb1ei1n642" path="res://scripts/ui/hud/cargo_counter.gd" id="1_rnu65"]
+[ext_resource type="Script" uid="uid://d2a2a2psujlun" path="res://scripts/ui/hud/overheat.gd" id="3_2wu1p"]
 [ext_resource type="Script" uid="uid://bbl4e828j5yet" path="res://scripts/ui/hud/controls_timer.gd" id="3_e0nub"]
+[ext_resource type="Script" uid="uid://rbi2juqyyb1n" path="res://scripts/ui/hud/boost.gd" id="4_4m4yb"]
 
 [node name="hud" type="Control" unique_id=1399470084]
 z_index = -100
@@ -25,15 +27,56 @@ repeat_times = 1000
 position = Vector2(1002, 437)
 texture = ExtResource("1_e0nub")
 
-[node name="h_box_container" type="HBoxContainer" parent="canvas_layer" unique_id=38165725]
-offset_right = 141.0
-offset_bottom = 88.0
+[node name="v_box_container_2" type="VBoxContainer" parent="canvas_layer" unique_id=1224986504]
+offset_right = 432.0
+offset_bottom = 290.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
 
-[node name="cargo_counter" type="Label" parent="canvas_layer/h_box_container" unique_id=158841415]
+[node name="cargo_counter" type="Label" parent="canvas_layer/v_box_container_2" unique_id=158841415]
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "Cargo: 0"
 script = ExtResource("1_rnu65")
+
+[node name="overheat" type="HBoxContainer" parent="canvas_layer/v_box_container_2" unique_id=2066675837]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="label" type="Label" parent="canvas_layer/v_box_container_2/overheat" unique_id=1003127612]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Overheat"
+
+[node name="progress_bar" type="ProgressBar" parent="canvas_layer/v_box_container_2/overheat" unique_id=814708623]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 1
+step = 1.0
+rounded = true
+script = ExtResource("3_2wu1p")
+
+[node name="boost" type="HBoxContainer" parent="canvas_layer/v_box_container_2" unique_id=224158728]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="label" type="Label" parent="canvas_layer/v_box_container_2/boost" unique_id=98403267]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Boost      "
+
+[node name="progress_bar" type="ProgressBar" parent="canvas_layer/v_box_container_2/boost" unique_id=1461052827]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 1
+step = 1.0
+rounded = true
+script = ExtResource("4_4m4yb")
 
 [node name="v_box_container" type="VBoxContainer" parent="canvas_layer" unique_id=1937738009]
 anchors_preset = 5

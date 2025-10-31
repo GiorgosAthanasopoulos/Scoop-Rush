@@ -9,6 +9,7 @@ extends Node
 @onready var boost_audio: AudioStreamPlayer = $'../boost_audio'
 
 var _can_boost: bool = true
+var _boost_charges: int = 0
 var _timer: Timer = Timer.new()
 
 func _ready() -> void:
@@ -18,23 +19,31 @@ func _ready() -> void:
 	if error != OK:
 		push_error("Failed to connect timer timeout in jumping: " + error_string(error))
 
+	error = Signals.boost_picked_up.connect(_on_boost_picked_up) as Error
+	if error != OK:
+		push_error("Failed to connect on boost picked up in boost: " + error_string(error))
 
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed(boost_input_action) and _can_boost:
-		boost_audio.play()
+	if Input.is_action_just_pressed(boost_input_action):
 		_boost()
-		_can_boost = false
-		_timer.start()
 
 func _boost() -> void:
-	var has_boost: bool = true
-	if not has_boost:
+	var can_boost: bool = _can_boost and _boost_charges > 0
+	if not can_boost:
 		return
 
 	var dir: Vector2 = Vector2.RIGHT.rotated(player.rotation)
 	var _boost_force: Vector2 = dir * boost_force
 
 	player.apply_central_impulse(_boost_force)
+	boost_audio.play()
+	_can_boost = false
+	_timer.start()
+	_boost_charges -= 1
+	Signals.emit_boost_used()
 
 func _on_timer_timeout() -> void:
 	_can_boost = true
+
+func _on_boost_picked_up(charges: int) -> void:
+	_boost_charges = charges
