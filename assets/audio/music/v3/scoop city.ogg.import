@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d2kvuq41bxskf"
+path="res://.godot/imported/scoop city.ogg-72c230336494a69fb57fbc6d7ad1ac4c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/v3/scoop city.ogg"
+dest_files=["res://.godot/imported/scoop city.ogg-72c230336494a69fb57fbc6d7ad1ac4c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

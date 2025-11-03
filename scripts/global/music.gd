@@ -5,7 +5,7 @@ extends Node
 @onready var player: AudioStreamPlayer = AudioStreamPlayer.new()
 
 const MENU: AudioStreamOggVorbis = preload('res://assets/audio/music/menu/v1/menu.ogg')
-const SCOOP_CITY_DEMO: AudioStreamMP3 = preload('res://assets/audio/music/v2/scoop city_demo.mp3')
+const ICE_CREAM_HOUSE: AudioStreamOggVorbis = preload('res://assets/audio/music/v3/scoop city.ogg')
 
 func _ready() -> void:
 	add_child(player)
@@ -17,7 +17,7 @@ func play_menu_music() -> void:
 	player.play()
 
 func play_game_music() -> void:
-	player.stream = SCOOP_CITY_DEMO
+	player.stream = ICE_CREAM_HOUSE
 	player.play()
 
 func stop() -> void:
